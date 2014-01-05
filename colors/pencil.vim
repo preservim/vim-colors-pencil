@@ -23,13 +23,13 @@ let g:colors_name='pencil'
 "let s:iaSelection       = { 'gui': '#B6D6FD' }
 "let s:iaSelectionNOS    = { 'gui': '#D4D4D4' }
 "let s:iaStatusBar       = { 'gui': '#EDEDED' }
-"let s:iaStatusBarBorder = { 'gui': '#D9D9D9' }
+"let s:iaStatusBarBorder = { 'gui': '#D9D9D9' }   used for search too
 "let s:iaText            = { 'gui': '#424242' }
 "let s:iaBlue            = { 'gui': '#B5D6FD' }
-"let s:iaGreen           = { 'gui': '#30C798' }
-"let s:iaBlue2           = { 'gui': '#1DAEE4' }
-"let s:iaGrey            = { 'gui': '#999999' }
-"let s:iaRed             = { 'gui': '#E32791' }
+"let s:iaGreen           = { 'gui': '#30C798' }   darkened to: #10A778
+"let s:iaBlue2           = { 'gui': '#1DAEE4' }   darkened to: #008EC4
+"let s:iaGrey            = { 'gui': '#999999' }   lightened to: #D9D9D9
+"let s:iaRed             = { 'gui': '#E32791' }   darkened to: #C30771
 "let s:iaUnfocusedText   = { 'gui': '#B8B8B8' }
 "let s:iaMenuSelected    = { 'gui': '#2C81FB' }
 "let s:iaMenuUnSelected  = { 'gui': '#545454' }
@@ -38,14 +38,15 @@ let g:colors_name='pencil'
 "let s:iaDarkKeyBg       = { 'gui': '#262626' }
 "let s:iaNearBlack       = { 'gui': '#181818' }
 "let s:iaSyntaxButton    = { 'gui': '#363738' }
-"let s:iaSearchHighlight = { 'gui': '#F3E430' }
+"let s:iaSearchHighlight = { 'gui': '#F3E430' }  yellow
+" Purple: #8F8FB7
 
 " preferred groups
 " (see `:h w18`)
 "
 hi Cursor       guifg=#424242    guibg=#20BBFC
 hi Normal       guifg=#424242    guibg=#f1f1f1  gui=none     ctermfg=black        ctermbg=white
-hi Comment      guifg=#30C798                   gui=italic   ctermfg=darkgreen
+hi Comment      guifg=#10A778                   gui=italic   ctermfg=darkgreen
 
 " yellow (was #c033ff)
 hi Constant     guifg=#679707                                ctermfg=darkyellow
@@ -56,24 +57,24 @@ hi Boolean      guifg=#67972F                                ctermfg=darkyellow
 hi Float        guifg=#A46F00                                ctermfg=darkyellow
 
 " pink
-hi Identifier   guifg=#E32791                                ctermfg=red
-hi Function     guifg=#E32791                                ctermfg=red
+hi Identifier   guifg=#C30771                                ctermfg=red
+hi Function     guifg=#C30771                                ctermfg=red
 
 " blue
-hi Statement    guifg=#1DAEE4                                ctermfg=darkblue
-hi Conditional  guifg=#1DAEE4                                ctermfg=darkblue
-hi Repeat       guifg=#1DAEE4                                ctermfg=darkblue
-hi Label        guifg=#1DAEE4                                ctermfg=darkblue
-hi Operator     guifg=#1DAEE4                                ctermfg=darkblue
-hi Keyword      guifg=#1DAEE4                                ctermfg=darkblue
-hi Exception    guifg=#1DAEE4                                ctermfg=darkblue
+hi Statement    guifg=#008EC4                                ctermfg=darkblue
+hi Conditional  guifg=#008EC4                                ctermfg=darkblue
+hi Repeat       guifg=#008EC4                                ctermfg=darkblue
+hi Label        guifg=#008EC4                                ctermfg=darkblue
+hi Operator     guifg=#008EC4                                ctermfg=darkblue
+hi Keyword      guifg=#008EC4                                ctermfg=darkblue
+hi Exception    guifg=#008EC4                                ctermfg=darkblue
 
 " green
-hi PreProc      guifg=#30C798                                ctermfg=darkgreen
-hi Include      guifg=#30C798                                ctermfg=darkgreen
-hi Define       guifg=#30C798                                ctermfg=darkgreen
-hi Macro        guifg=#30C798                                ctermfg=darkgreen
-hi PreCondit    guifg=#30C798                                ctermfg=darkgreen
+hi PreProc      guifg=#10A778                                ctermfg=darkgreen
+hi Include      guifg=#10A778                                ctermfg=darkgreen
+hi Define       guifg=#10A778                                ctermfg=darkgreen
+hi Macro        guifg=#10A778                                ctermfg=darkgreen
+hi PreCondit    guifg=#10A778                                ctermfg=darkgreen
 
 " purple
 hi Type           guifg=#8F8FB7                              ctermfg=darkcyan
@@ -81,13 +82,13 @@ hi StorageClass   guifg=#8F8FB7                              ctermfg=darkcyan
 hi Structure      guifg=#8F8FB7                              ctermfg=darkcyan
 hi Typedef        guifg=#8F8FB7                              ctermfg=darkcyan
 
-" red 
-hi Special         guifg=#E32791                             ctermfg=darkred
-hi SpecialChar     guifg=#E32791                             ctermfg=darkred
-hi Tag             guifg=#E32791                             ctermfg=darkred
-hi Delimiter       guifg=#E32791                             ctermfg=darkred
-hi SpecialComment  guifg=#E32791                             ctermfg=darkred
-hi Debug           guifg=#E32791                             ctermfg=darkred
+" red
+hi Special         guifg=#C30771                             ctermfg=darkred
+hi SpecialChar     guifg=#C30771                             ctermfg=darkred
+hi Tag             guifg=#C30771                             ctermfg=darkred
+hi Delimiter       guifg=#C30771                             ctermfg=darkred
+hi SpecialComment  guifg=#C30771                             ctermfg=darkred
+hi Debug           guifg=#C30771                             ctermfg=darkred
 
 hi Underlined     guifg=fg                                   ctermfg=fg
 hi Ignore         guifg=bg                                   ctermfg=bg
@@ -124,14 +125,14 @@ hi WarningMsg     guifg=#AF87D7               ctermfg=140
 hi MoreMsg        guifg=DarkBlue              ctermfg=darkblue
 hi ModeMsg        guifg=DarkGreen             ctermfg=darkgreen
 
-hi Search         guifg=fg      guibg=#999999  gui=none  ctermfg=16     ctermbg=179     cterm=none
+hi Search         guifg=fg      guibg=#D9D9D9  gui=none  ctermfg=16     ctermbg=179     cterm=none
 hi IncSearch      guifg=fg      guibg=#F3E430  gui=none  ctermfg=231    ctermbg=168     cterm=none
 hi Question       guifg=DarkRed                          ctermfg=38
 
 hi Folded          guifg=#808080    guibg=bg       ctermfg=244    ctermbg=bg
 hi FoldColumn      guifg=#5FD7AF    guibg=bg       ctermfg=79     ctermbg=bg
 hi SignColumn      guifg=#5FD7AF    guibg=bg       ctermfg=79     ctermbg=bg
-hi ColorColumn     guifg=#5FD7AF    guibg=#999999  ctermfg=79     ctermbg=bg
+hi ColorColumn     guifg=#5FD7AF    guibg=#D9D9D9  ctermfg=79     ctermbg=bg
 
 hi CursorColumn  guibg=#E5E6E6                gui=none  ctermbg=bg    cterm=none
 hi CursorLine    guibg=#E5E6E6                gui=none  ctermbg=bg    cterm=none
@@ -155,23 +156,16 @@ hi htmlBold       guifg=fg      guibg=NONE gui=bold        ctermfg=38  ctermbg=N
 hi htmlBoldItalic guifg=fg      guibg=NONE gui=bold,italic ctermfg=38  ctermbg=NONE cterm=bold
 hi htmlH1         guifg=#424242 guibg=NONE gui=bold,italic ctermfg=38  ctermbg=NONE cterm=bold
 hi htmlH2         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH3         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH4         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH5         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH6         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
+hi link htmlH3 htmlH2
+hi link htmlH4 htmlH3
+hi htmlH5         guifg=#424242 guibg=NONE gui=italic       ctermfg=38  ctermbg=NONE cterm=bold
+hi link htmlH6 htmlH5
 hi htmlLink       guifg=#929292 guibg=NONE gui=underline   ctermfg=185 ctermbg=NONE cterm=NONE
 hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 hi htmlTagName    guifg=fg      guibg=NONE gui=NONE        ctermfg=182 ctermbg=NONE cterm=NONE
 hi link htmlTag         Keyword
 hi link htmlEndTag      Identifier
 hi link htmlTagName     Conditional
-"hi link htmlH2 htmlH1
-hi link htmlH3 htmlH1
-hi link htmlH4 htmlH1
-
-hi mkdCode    guifg=#808080 ctermfg=244
-hi mkdURL     guifg=#87AFFF ctermfg=111
-hi mkdLink    guifg=#D7AFAF ctermfg=181
 
 " tpope/vim-markdown
 hi markdownHeadingDelimiter  guifg=black ctermfg=black

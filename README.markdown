@@ -1,9 +1,9 @@
 # vim-colors-pencil
 
-> A color scheme for Vim inspired by iA Writer
+> A light color scheme for Vim inspired by iA Writer
 
-iA Writer is an elegant word processor, only marred by its lack of Vim. It
-does have a nice colorscheme, which this one is modeled after.
+iA Writer is an elegant word processor, marred only by its lack of Vim. It
+does have a nice colorscheme, which this one is inspired by.
 
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
 * Ideal for use in a distraction-free environment
@@ -31,6 +31,8 @@ author:
 * [vim-litecorrect](http://github.com/reedes/vim-litecorrect) - Lightweight auto-correction for Vim
 
 ## Future development
+
+Eventually there’ll be a dark equivalent.
 
 If you’ve spotted a problem or have an idea on improving this color
 scheme, please post it to the github project issue page.
