@@ -1,8 +1,8 @@
 # vim-colors-pencil
 
-> An pencil color scheme for Vim
+> A color scheme for Vim inspired by iA Writer
 
-IAWriter is an elegant word processor, only marred by its lack of Vim. It
+iA Writer is an elegant word processor, only marred by its lack of Vim. It
 does have a nice colorscheme, which this one is modeled after.
 
 ## Requirements
@@ -24,6 +24,7 @@ If you like this plugin, you may like these other ones from the same author:
 * [vim-lexical](http://github.com/reedes/vim-lexical) - Building on Vim’s spell-check and thesaurus/dictionary completion
 * [vim-thematic](http://github.com/reedes/vim-thematic) — Conveniently manage Vim’s appearance to suit your task and environment 
 * [vim-pencil](http://github.com/reedes/vim-pencil) - Extending Vim to better support writing prose and documentation
+* [vim-litecorrect](http://github.com/reedes/vim-litecorrect) - Lightweight auto-correction for Vim
 
 ## Future development
 
