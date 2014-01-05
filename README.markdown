@@ -5,6 +5,11 @@
 iA Writer is an elegant word processor, only marred by its lack of Vim. It
 does have a nice colorscheme, which this one is modeled after.
 
+* Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
+* Ideal for use in a distraction-free environment
+* Use for both code or prose, though it’s definitely geared towards the
+  latter
+
 ## Requirements
 
 May require a recent version of Vim.
@@ -13,8 +18,6 @@ May require a recent version of Vim.
 
 Install using Pathogen, Vundle, Neobundle, or your favorite Vim package
 manager.
-
-## Related
 
 ## See also
 
