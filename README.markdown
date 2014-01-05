@@ -18,7 +18,8 @@ manager.
 
 ## See also
 
-If you like this plugin, you may like these other ones from the same author:
+If you like this color scheme, you may like these plugins from the same
+author:
 
 * [vim-quotable](http://github.com/reedes/vim-quotable) - extends Vim to support typographic (‘curly’) quotes
 * [vim-lexical](http://github.com/reedes/vim-lexical) - Building on Vim’s spell-check and thesaurus/dictionary completion
@@ -28,7 +29,7 @@ If you like this plugin, you may like these other ones from the same author:
 
 ## Future development
 
-If you’ve spotted a problem or have an idea on improving this plugin,
-please post it to the github project issue page.
+If you’ve spotted a problem or have an idea on improving this color
+scheme, please post it to the github project issue page.
 
 <!-- vim: set tw=74 :-->

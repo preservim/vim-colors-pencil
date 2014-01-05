@@ -74,32 +74,32 @@ hi StatusLine      guifg=fg      guibg=grey86     gui=none ctermfg=fg  ctermbg=b
 hi StatusLineNC    guifg=grey50  guibg=grey86     gui=none ctermfg=fg ctermbg=bg cterm=none
 hi TabLine         guifg=fg      guibg=DarkBlue   gui=none ctermfg=fg  ctermbg=bg cterm=none
 hi TabLineSel      guifg=#DADADA guibg=DarkRed    gui=none ctermfg=253 ctermbg=238 cterm=none
-hi TabLineFill     guifg=fg      guibg=DarkOrange gui=none ctermfg=fg  ctermbg=bg cterm=none
-"
-hi Pmenu          guifg=fg         guibg=#3A3A3A              ctermfg=fg     ctermbg=bg
-hi PmenuSel       guifg=#FFFFFF    guibg=#808080              ctermfg=231    ctermbg=244
-hi PmenuSbar      guifg=#FFFFFF    guibg=#808080              ctermfg=231    ctermbg=244
-hi WildMenu       guifg=#5FAF5F    guibg=#3A3A3A    gui=none  ctermfg=71     ctermbg=bg    cterm=none
+hi TabLineFill     guifg=fg      guibg=#F7DF94    gui=none ctermfg=fg  ctermbg=bg cterm=none
 
-hi Visual         guifg=fg    guibg=#b6d6fd            ctermfg=fg     ctermbg=117
-hi VisualNOS      guifg=bg    guibg=#b6d6fd            ctermfg=bg     ctermbg=116
-hi VertSplit      guifg=fg    guibg=grey86    gui=none ctermfg=244    ctermbg=bg    cterm=none
-hi LineNr         guifg=fg    guibg=grey86             ctermfg=244    ctermbg=bg
+hi Pmenu          guifg=fg       guibg=grey86               ctermfg=fg     ctermbg=bg
+hi PmenuSel       guifg=fg       guibg=#F7DF94              ctermfg=231    ctermbg=244
+hi PmenuSbar      guifg=fg       guibg=grey86               ctermfg=231    ctermbg=244
+hi WildMenu       guifg=fg       guibg=#F7DF94    gui=none  ctermfg=71     ctermbg=bg    cterm=none
+
+hi Visual         guifg=fg       guibg=#b6d6fd            ctermfg=fg     ctermbg=117
+hi VisualNOS      guifg=bg       guibg=#b6d6fd            ctermfg=bg     ctermbg=116
+hi VertSplit      guifg=fg       guibg=grey86    gui=none ctermfg=244    ctermbg=bg    cterm=none
+hi LineNr         guifg=fg       guibg=grey86             ctermfg=244    ctermbg=bg
 
 hi Title          guifg=DarkBlue                  ctermfg=109
 hi SpecialKey     guifg=#87D787                   ctermfg=114
 hi NonText        guifg=DarkRed                   ctermfg=244
-hi MatchParen     guifg=#000000   guibg=#5FAF87  ctermfg=16     ctermbg=72
+hi MatchParen     guifg=fg        guibg=#F7DF94   ctermfg=16     ctermbg=72
 hi Directory      guifg=#8787AF                   ctermfg=103
 
 hi ErrorMsg       guifg=#FF8787    guibg=bg   ctermfg=210    ctermbg=bg
 hi WarningMsg     guifg=#AF87D7               ctermfg=140
-hi MoreMsg        guifg=#5FAF87               ctermfg=72
-hi ModeMsg        guifg=#FFD787               ctermfg=222
+hi MoreMsg        guifg=DarkBlue              ctermfg=darkblue
+hi ModeMsg        guifg=DarkGreen             ctermfg=darkgreen
 
-hi Search         guifg=fg      guibg=#F7DF9F  gui=none  ctermfg=16     ctermbg=179     cterm=none
-hi IncSearch      guifg=fg      guibg=#F79FC7  gui=none  ctermfg=231    ctermbg=168     cterm=none
-hi Question       guifg=DarkRed guibg=grey86             ctermfg=38
+hi Search         guifg=fg      guibg=grey86   gui=none  ctermfg=16     ctermbg=179     cterm=none
+hi IncSearch      guifg=fg      guibg=#F7DF94  gui=none  ctermfg=231    ctermbg=168     cterm=none
+hi Question       guifg=DarkRed                          ctermfg=38
 
 hi Folded          guifg=#808080    guibg=bg       ctermfg=244    ctermbg=bg
 hi FoldColumn      guifg=#5FD7AF    guibg=bg       ctermfg=79     ctermbg=bg
