@@ -155,10 +155,10 @@ hi htmlBold       guifg=fg      guibg=NONE gui=bold        ctermfg=38  ctermbg=N
 hi htmlBoldItalic guifg=fg      guibg=NONE gui=bold,italic ctermfg=38  ctermbg=NONE cterm=bold
 hi htmlH1         guifg=#424242 guibg=NONE gui=bold,italic ctermfg=38  ctermbg=NONE cterm=bold
 hi htmlH2         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH3         guifg=#424242 guibg=NONE gui=italic      ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH4         guifg=#424242 guibg=NONE gui=NONE        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH5         guifg=#424242 guibg=NONE gui=NONE        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH6         guifg=#424242 guibg=NONE gui=NONE        ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlH3         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlH4         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlH5         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlH6         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
 hi htmlLink       guifg=#929292 guibg=NONE gui=underline   ctermfg=185 ctermbg=NONE cterm=NONE
 hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 hi htmlTagName    guifg=fg      guibg=NONE gui=NONE        ctermfg=182 ctermbg=NONE cterm=NONE
