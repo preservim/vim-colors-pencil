@@ -2,7 +2,7 @@
 
 > A light color scheme for Vim inspired by iA Writer
 
-![demo](screenshots/markdown_example.png)
+![demo](screenshots/markdown-example.png)
 
 ## Features
 
