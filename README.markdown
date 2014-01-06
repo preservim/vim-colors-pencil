@@ -2,6 +2,10 @@
 
 > A light color scheme for Vim inspired by iA Writer
 
+![demo](screenshots/markdown_example.png)
+
+## Features
+
 iA Writer is an elegant word processor, marred only by its lack of Vim. It
 does have a nice colorscheme, which this one is inspired by.
 
@@ -62,8 +66,7 @@ author:
   manage Vim’s appearance to suit your task and environment 
 * [vim-pencil](http://github.com/reedes/vim-pencil) - Extending Vim to
   better support writing prose and documentation
-* [vim-litecorrect](http://github.com/reedes/vim-litecorrect)
-  - Lightweight auto-correction for Vim
+* [vim-litecorrect](http://github.com/reedes/vim-litecorrect) - Lightweight auto-correction for Vim
 
 The [README](https://github.com/reedes/vim-thematic/README.markdown) in
 _thematic_ has more details on setting up emulation of iA Writer.
