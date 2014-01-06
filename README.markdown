@@ -12,7 +12,7 @@ does have a nice colorscheme, however.
 * Accurate colors
 * Ideal for use in a distraction-free environment
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
-* Use for both code or prose, though it’s definitely geared towards the
+* Use for both code and prose, though it’s definitely geared towards the
   latter
 
 ## Requirements
