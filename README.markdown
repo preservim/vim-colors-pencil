@@ -68,7 +68,7 @@ author:
   better support writing prose and documentation
 * [vim-litecorrect](http://github.com/reedes/vim-litecorrect) - Lightweight auto-correction for Vim
 
-The [README](https://github.com/reedes/vim-thematic/README.markdown) in
+The [README](https://github.com/reedes/vim-thematic) in
 _thematic_ has more details on setting up emulation of iA Writer.
 
 ## Future development
