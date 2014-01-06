@@ -54,11 +54,19 @@ Free alternatives with bold and italic support include:
 If you like this color scheme, you may like these plugins from the same
 author:
 
-* [vim-quotable](http://github.com/reedes/vim-quotable) - extends Vim to support typographic (‘curly’) quotes
-* [vim-lexical](http://github.com/reedes/vim-lexical) - Building on Vim’s spell-check and thesaurus/dictionary completion
-* [vim-thematic](http://github.com/reedes/vim-thematic) — Conveniently manage Vim’s appearance to suit your task and environment 
-* [vim-pencil](http://github.com/reedes/vim-pencil) - Extending Vim to better support writing prose and documentation
-* [vim-litecorrect](http://github.com/reedes/vim-litecorrect) - Lightweight auto-correction for Vim
+* [vim-quotable](http://github.com/reedes/vim-quotable) - extends Vim to
+  support typographic (‘curly’) quotes
+* [vim-lexical](http://github.com/reedes/vim-lexical) - Building on Vim’s
+  spell-check and thesaurus/dictionary completion
+* [vim-thematic](http://github.com/reedes/vim-thematic) — Conveniently
+  manage Vim’s appearance to suit your task and environment 
+* [vim-pencil](http://github.com/reedes/vim-pencil) - Extending Vim to
+  better support writing prose and documentation
+* [vim-litecorrect](http://github.com/reedes/vim-litecorrect)
+  - Lightweight auto-correction for Vim
+
+The [README](https://github.com/reedes/vim-thematic/README.markdown) in
+_thematic_ has more details on setting up emulation of iA Writer.
 
 ## Future development
 
