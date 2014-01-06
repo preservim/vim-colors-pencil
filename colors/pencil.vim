@@ -138,10 +138,10 @@ hi ColorColumn     guifg=#5FD7AF    guibg=#D9D9D9  ctermfg=79     ctermbg=bg
 hi CursorColumn  guibg=#E5E6E6                gui=none  ctermbg=bg    cterm=none
 hi CursorLine    guibg=#E5E6E6                gui=none  ctermbg=bg    cterm=none
 
-hi DiffAdd       guifg=#99DD99    guibg=NONE     ctermfg=darkgreen  ctermbg=bg
-hi DiffDelete    guifg=#FFCCCC    guibg=NONE     ctermfg=darkred    ctermbg=bg
-hi DiffText      guifg=darkblue   guibg=NONE     ctermfg=darkblue   ctermbg=bg
-hi DiffChange    guifg=#CCCCFF    guibg=NONE     ctermfg=darkcyan   ctermbg=bg
+hi DiffAdd       guifg=#10A778    guibg=NONE     ctermfg=darkgreen  ctermbg=bg
+hi DiffDelete    guifg=#C30771    guibg=NONE     ctermfg=darkred    ctermbg=bg
+hi DiffChange    guifg=#F3E430    guibg=NONE     ctermfg=darkyellow ctermbg=bg
+hi DiffText      guifg=#008EC4    guibg=NONE     ctermfg=darkblue   ctermbg=bg
 
 hi SpellBad      guifg=fg         guibg=bg    gui=undercurl   guisp=#cc0000 ctermfg=210    ctermbg=bg      cterm=underline
 hi SpellCap      guifg=fg         guibg=bg    gui=undercurl   guisp=#22cc22 ctermfg=174    ctermbg=bg      cterm=underline
@@ -183,3 +183,15 @@ hi markdownUrl               guifg=#999999
 hi link xmlTag          Keyword
 hi link xmlTagName      Conditional
 hi link xmlEndTag       Identifier
+
+" Signify, git-gutter
+" We're not defaulting to diff, as these are meant to be subtle
+highlight SignifySignAdd    guifg=#99DD99 guibg=NONE  cterm=bold ctermbg=237  ctermfg=119
+highlight SignifySignDelete guifg=#FFCCCC guibg=NONE  cterm=bold ctermbg=237  ctermfg=167
+highlight SignifySignChange guifg=#CCCCFF guibg=NONE  cterm=bold ctermbg=237  ctermfg=227
+
+highlight GitGutterAdd          guifg=#99DD99 guibg=NONE  cterm=bold ctermbg=237  ctermfg=119    
+highlight GitGutterDelete       guifg=#FFCCCC guibg=NONE  cterm=bold ctermbg=237  ctermfg=167  
+highlight GitGutterChange       guifg=#CCCCFF guibg=NONE  cterm=bold ctermbg=237  ctermfg=227   
+highlight GitGutterChangeDelete guifg=#CCCCFF guibg=NONE  cterm=bold ctermbg=237  ctermfg=227
+

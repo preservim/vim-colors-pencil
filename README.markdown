@@ -10,7 +10,6 @@ iA Writer is an elegant word processor, marred only by its lack of Vim. It
 does have a nice colorscheme, however.
 
 * Accurate colors
-* Ideal for use in a distraction-free environment
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
 * Use for both code and prose, though it’s definitely geared towards the
   latter
