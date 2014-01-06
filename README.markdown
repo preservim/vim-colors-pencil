@@ -2,15 +2,16 @@
 
 > A light color scheme for Vim inspired by iA Writer
 
-![demo](screenshots/markdown-example.png)
+![markdown-example](screenshots/markdown-example.png)
 
 ## Features
 
 iA Writer is an elegant word processor, marred only by its lack of Vim. It
-does have a nice colorscheme, which this one is inspired by.
+does have a nice colorscheme, however.
 
-* Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
+* Accurate colors
 * Ideal for use in a distraction-free environment
+* Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
 * Use for both code or prose, though it’s definitely geared towards the
   latter
 
