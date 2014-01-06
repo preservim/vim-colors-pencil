@@ -40,6 +40,7 @@ let g:colors_name='pencil'
 "let s:iaSyntaxButton    = { 'gui': '#363738' }
 "let s:iaSearchHighlight = { 'gui': '#F3E430' }  yellow
 " Purple: #8F8FB7
+" Headings: #4242FF
 
 " preferred groups
 " (see `:h w18`)
@@ -154,13 +155,13 @@ hi helpHyperTextJump guifg=#5FAFD7 ctermfg=74
 hi htmlItalic     guifg=fg      guibg=NONE gui=italic      ctermfg=38  ctermbg=NONE cterm=bold
 hi htmlBold       guifg=fg      guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
 hi htmlBoldItalic guifg=fg      guibg=NONE gui=bold,italic ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH1         guifg=#424242 guibg=NONE gui=bold,italic ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH2         guifg=#424242 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
-hi link htmlH3 htmlH2
-hi link htmlH4 htmlH3
-hi htmlH5         guifg=#424242 guibg=NONE gui=italic       ctermfg=38  ctermbg=NONE cterm=bold
-hi link htmlH6 htmlH5
-hi htmlLink       guifg=#929292 guibg=NONE gui=underline   ctermfg=185 ctermbg=NONE cterm=NONE
+hi htmlH1         guifg=#226292 guibg=NONE gui=bold,italic ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlH2         guifg=#226282 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlH3         guifg=#325272 guibg=NONE gui=italic      ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlH4         guifg=#325262 guibg=NONE gui=NONE        ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlH5         guifg=#424252 guibg=NONE gui=NONE        ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlH6         guifg=#424242 guibg=NONE gui=NONE        ctermfg=38  ctermbg=NONE cterm=bold
+hi htmlLink       guifg=#424242 guibg=NONE gui=NONE        ctermfg=185 ctermbg=NONE cterm=NONE
 hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 hi htmlTagName    guifg=fg      guibg=NONE gui=NONE        ctermfg=182 ctermbg=NONE cterm=NONE
 hi link htmlTag         Keyword
@@ -168,7 +169,16 @@ hi link htmlEndTag      Identifier
 hi link htmlTagName     Conditional
 
 " tpope/vim-markdown
-hi markdownHeadingDelimiter  guifg=black ctermfg=black
+" Needed to retain the syntax highlighting for code
+" TODO support for plasticboy/vim-markdown as well
+hi markdownHeadingDelimiter  guifg=#424242
+hi markdownRule              guifg=#424242
+hi markdownIdDeclaration     guifg=#424242
+hi markdownId                guifg=#999999
+hi markdownIdDelimiter       guifg=#999999
+hi markdownLinkTextDelimiter guifg=#999999
+hi markdownLinkDelimiter     guifg=#999999
+hi markdownUrl               guifg=#999999
 
 hi link xmlTag          Keyword
 hi link xmlTagName      Conditional
