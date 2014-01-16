@@ -4,8 +4,6 @@
 
 ![markdown-example](screenshots/markdown-example.png)
 
-![vimscript-example](screenshots/vimscript-example.png)
-
 ## Features
 
 iA Writer is an elegant word processor, marred only by its lack of Vim. It
@@ -34,6 +32,8 @@ Just like any other colorscheme:
 ```vim
 :colorscheme pencil
 ```
+
+![vimscript-example](screenshots/vimscript-example.png)
 
 ## Differences
 
