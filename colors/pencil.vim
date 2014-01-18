@@ -93,8 +93,8 @@ hi Debug           guifg=#C30771                             ctermfg=darkred
 
 hi Underlined     guifg=fg                                   ctermfg=fg
 hi Ignore         guifg=bg                                   ctermfg=bg
-hi Error          guifg=#FFFFFF    guibg=#D75F5F        ctermfg=231    ctermbg=167
-hi Todo           guifg=#D7D7FF    guibg=bg    gui=none ctermfg=189    ctermbg=bg     cterm=none
+hi Error          guifg=#FFFFFF    guibg=#D75F5F        ctermfg=231     ctermbg=167    cterm=bold
+hi Todo           guifg=#D7D7FF    guibg=bg    gui=none ctermfg=231     ctermbg=red    cterm=bold
 
 "
 " minor groups
@@ -133,10 +133,10 @@ hi Question       guifg=DarkRed                          ctermfg=38
 hi Folded          guifg=#808080    guibg=bg       ctermfg=244    ctermbg=bg
 hi FoldColumn      guifg=#5FD7AF    guibg=bg       ctermfg=79     ctermbg=bg
 hi SignColumn      guifg=#5FD7AF    guibg=bg       ctermfg=79     ctermbg=bg
-hi ColorColumn     guifg=#5FD7AF    guibg=#D9D9D9  ctermfg=79     ctermbg=bg
+hi ColorColumn     guifg=#5FD7AF    guibg=#D9D9D9                 ctermbg=79
 
-hi CursorColumn  guibg=#E5E6E6                gui=none  ctermbg=bg    cterm=none
-hi CursorLine    guibg=#E5E6E6                gui=none  ctermbg=bg    cterm=none
+hi CursorColumn  guibg=#E5E6E6                gui=none  ctermbg=253    cterm=none
+hi CursorLine    guibg=#E5E6E6                gui=none  ctermbg=253    cterm=none
 
 hi DiffAdd       guifg=#10A778    guibg=NONE     ctermfg=darkgreen  ctermbg=bg
 hi DiffDelete    guifg=#C30771    guibg=NONE     ctermfg=darkred    ctermbg=bg
