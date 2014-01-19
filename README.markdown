@@ -57,7 +57,7 @@ Free alternatives with bold and italic support include:
 
 ## See also
 
-* [iterm-colors-pencil][ip] - [@mattly][mt]’s created an iTerm color scheme
+* [iterm-colors-pencil][ip] - [@mattly][mt] has created an iTerm color scheme for pencil
 
 [mt]: https://github.com/mattly
 [ip]: https://github.com/mattly/iterm-colors-pencil
@@ -65,10 +65,10 @@ Free alternatives with bold and italic support include:
 If you find this plugin useful, you may want to check out these others by
 the same author:
 
-* [vim-lexical][lx] - building on vim’s spell-check and thesaurus/dictionary completion
-* [vim-litecorrect][lc] - lightweight auto-correction for vim
-* [vim-pencil][pn] - rethinking vim as a tool for writers
-* [vim-quotable][qu] - extends vim to support typographic (‘curly’) quotes
+* [vim-lexical][lx] - building on Vim’s spell-check and thesaurus/dictionary completion
+* [vim-litecorrect][lc] - lightweight auto-correction for Vim
+* [vim-pencil][pn] - rethinking Vim as a tool for writers
+* [vim-quotable][qu] - extends Vim to support typographic (‘curly’) quotes
 * [vim-thematic][th] — modify Vim’s appearance to suit your task and environment 
 * [vim-wordy][wo] - uncovering usage problems in writing 
 
@@ -84,7 +84,7 @@ _thematic_ has more details on setting up emulation of iA Writer.
 
 ## Future development
 
-Eventually there’ll be a dark equivalent as well included in this
+Eventually there’ll be a dark equivalent included in this 
 colorscheme.
 
 If you’ve spotted a problem or have an idea on improving this color
