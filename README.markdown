@@ -57,18 +57,22 @@ Free alternatives with bold and italic support include:
 
 ## See also
 
-If you like this color scheme, you may like these plugins from the same
-author:
+If you find this plugin useful, you may want to check out these others by
+the same author:
 
-* [vim-quotable](http://github.com/reedes/vim-quotable) - extends Vim to
-  support typographic (‘curly’) quotes
-* [vim-lexical](http://github.com/reedes/vim-lexical) - Building on Vim’s
-  spell-check and thesaurus/dictionary completion
-* [vim-thematic](http://github.com/reedes/vim-thematic) — Conveniently
-  manage Vim’s appearance to suit your task and environment 
-* [vim-pencil](http://github.com/reedes/vim-pencil) - Extending Vim to
-  better support writing prose and documentation
-* [vim-litecorrect](http://github.com/reedes/vim-litecorrect) - Lightweight auto-correction for Vim
+* [vim-lexical][lx] - building on vim’s spell-check and thesaurus/dictionary completion
+* [vim-litecorrect][lc] - lightweight auto-correction for vim
+* [vim-pencil][pn] - rethinking vim as a tool for writers
+* [vim-quotable][qu] - extends vim to support typographic (‘curly’) quotes
+* [vim-thematic][th] —  appearance to suit your task and environment 
+* [vim-wordy][wo] - uncovering potential usage problems in writing 
+
+[lx]: http://github.com/reedes/vim-lexical
+[lc]: http://github.com/reedes/vim-litecorrect
+[pn]: http://github.com/reedes/vim-pencil
+[qu]: http://github.com/reedes/vim-quotable
+[th]: http://github.com/reedes/vim-thematic
+[wo]: http://github.com/reedes/vim-wordy
 
 The [README](https://github.com/reedes/vim-thematic) in
 _thematic_ has more details on setting up emulation of iA Writer.
