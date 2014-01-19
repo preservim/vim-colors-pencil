@@ -57,6 +57,11 @@ Free alternatives with bold and italic support include:
 
 ## See also
 
+* [iterm-colors-pencil][ip] - [@mattly][mt]’s created an iTerm color scheme
+
+[mt]: https://github.com/mattly
+[ip]: https://github.com/mattly/iterm-colors-pencil
+
 If you find this plugin useful, you may want to check out these others by
 the same author:
 
@@ -64,8 +69,8 @@ the same author:
 * [vim-litecorrect][lc] - lightweight auto-correction for vim
 * [vim-pencil][pn] - rethinking vim as a tool for writers
 * [vim-quotable][qu] - extends vim to support typographic (‘curly’) quotes
-* [vim-thematic][th] —  appearance to suit your task and environment 
-* [vim-wordy][wo] - uncovering potential usage problems in writing 
+* [vim-thematic][th] — modify Vim’s appearance to suit your task and environment 
+* [vim-wordy][wo] - uncovering usage problems in writing 
 
 [lx]: http://github.com/reedes/vim-lexical
 [lc]: http://github.com/reedes/vim-litecorrect
