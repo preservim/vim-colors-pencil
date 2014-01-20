@@ -18,7 +18,9 @@ let g:colors_name='pencil'
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
-let s:light_grey      = { "gui": "#D9D9D9", "cterm": 7     }
+let s:medium_grey     = { "gui": "#808080", "cterm": "240" }
+let s:light_grey      = { "gui": "#D9D9D9", "cterm": "254" }
+let s:lighter_grey    = { "gui": "#E5E6E6", "cterm": "255" }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
 let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 
@@ -34,7 +36,9 @@ let s:green           = { "gui": "#10A778", "cterm": "2"   }
 
 let s:purple          = { "gui": "#8F8FB7", "cterm": "5"   }
 
+let s:yellow          = { "gui": "#F3E430", "cterm": "220" }
 let s:dark_yellow     = { "gui": "#DFCF1D", "cterm": "3"   }
+
 
 
 " maybe pursue something like this: https://github.com/noahfrederick/vim-hemisu/
@@ -145,22 +149,22 @@ hi SpecialKey     guifg=#87D787                   ctermfg=114
 hi NonText        guifg=DarkRed                   ctermfg=244
 hi Directory      guifg=#8787AF                   ctermfg=103
 hi ErrorMsg       guifg=#FF8787    guibg=bg   ctermfg=210    ctermbg=bg
-hi IncSearch      guifg=fg      guibg=#F3E430  gui=none  ctermfg=231    ctermbg=168     cterm=none
-hi Search         guifg=fg      guibg=#D9D9D9  gui=none  ctermfg=16     ctermbg=179     cterm=none
+call s:h("IncSearch", {"bg": s:yellow, "fg": s:norm})
+call s:h("Search", {"bg": s:yellow, "fg": s:norm})
 hi MoreMsg        guifg=DarkBlue              ctermfg=darkblue
 hi ModeMsg        guifg=DarkGreen             ctermfg=darkgreen
-hi LineNr         guifg=#D9D9D9  guibg=NONE               ctermfg=244    ctermbg=none
-hi CursorLineNr   guifg=#20BBFC  guibg=NONE               ctermfg=244    ctermbg=none
+call s:h("LineNr", {"fg": s:light_grey})
+call s:h("CursorLineNr", {"fg": s:blue, "bg": s:lighter_grey})
 hi Question       guifg=DarkRed                          ctermfg=38
-hi StatusLine      guifg=fg      guibg=#D9D9D9    gui=none ctermfg=fg  ctermbg=bg cterm=none
-hi StatusLineNC    guifg=grey50  guibg=#D9D9D9    gui=none ctermfg=fg ctermbg=bg cterm=none
-hi VertSplit      guifg=fg       guibg=#D9D9D9    gui=none ctermfg=244    ctermbg=bg    cterm=none
+call s:h("StatusLine", {"bg": s:light_grey})
+call s:h("StatusLineNC", {"bg": s:light_grey, "fg": s:medium_grey})
+call s:h("VertSplit", {"bg": s:light_grey, "fg": s:light_grey})
 hi Title          guifg=DarkBlue                  ctermfg=109
 call s:h("Visual", {"bg": s:light_blue})
 call s:h("VisualNOS", {"bg": s:light_grey})
 hi WarningMsg     guifg=#AF87D7               ctermfg=140
 hi WildMenu       guifg=#F1F1F1  guibg=#262626    gui=none  ctermfg=71     ctermbg=bg    cterm=none
-hi Folded          guifg=#808080    guibg=bg       ctermfg=244    ctermbg=bg
+call s:h("Folded", {"fg": s:medium_grey})
 hi FoldColumn      guifg=#5FD7AF    guibg=bg       ctermfg=79     ctermbg=bg
 hi DiffAdd       guifg=#10A778    guibg=NONE     ctermfg=darkgreen  ctermbg=bg
 hi DiffDelete    guifg=#C30771    guibg=NONE     ctermfg=darkred    ctermbg=bg
@@ -179,8 +183,8 @@ hi PmenuThumb     guifg=#F1F1F1  guibg=#545454
 hi TabLine         guifg=#F1F1F1 guibg=#545454    gui=none ctermfg=fg  ctermbg=bg cterm=none
 hi TabLineSel      guifg=#F1F1F1 guibg=#2C81FB    gui=none ctermfg=253 ctermbg=238 cterm=none
 hi TabLineFill     guifg=#F1F1F1 guibg=#181818    gui=none ctermfg=fg  ctermbg=bg cterm=none
-hi CursorColumn  guibg=#E5E6E6                gui=none  ctermbg=253    cterm=none
-hi CursorLine    guibg=#E5E6E6                gui=none  ctermbg=253    cterm=none
+call s:h("CursorColumn", {"bg": s:lighter_grey})
+call s:h("CursorLine", {"bg": s:lighter_grey})
 hi ColorColumn     guifg=#5FD7AF    guibg=#D9D9D9                 ctermbg=79
 
 
