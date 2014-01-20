@@ -113,7 +113,8 @@ hi WildMenu       guifg=#F1F1F1  guibg=#262626    gui=none  ctermfg=71     cterm
 hi Visual         guifg=fg       guibg=#b6d6fd            ctermfg=fg     ctermbg=117
 hi VisualNOS      guifg=fg       guibg=#D4D4D4            ctermfg=bg     ctermbg=244
 hi VertSplit      guifg=fg       guibg=#D9D9D9    gui=none ctermfg=244    ctermbg=bg    cterm=none
-hi LineNr         guifg=fg       guibg=#B6D6FD             ctermfg=244    ctermbg=bg
+hi LineNr         guifg=#D9D9D9  guibg=NONE               ctermfg=244    ctermbg=none
+hi CursorLineNr   guifg=#20BBFC  guibg=NONE               ctermfg=244    ctermbg=none
 
 hi Title          guifg=DarkBlue                  ctermfg=109
 hi SpecialKey     guifg=#87D787                   ctermfg=114
