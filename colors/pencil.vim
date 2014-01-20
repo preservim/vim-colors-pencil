@@ -6,7 +6,7 @@
 " based on bubblegum and others
 "
 
-set background=light
+" set background=light
 hi clear
 
 if exists('syntax on')
@@ -14,6 +14,26 @@ if exists('syntax on')
 endif
 
 let g:colors_name='pencil'
+
+" Colors
+let s:black           = { "gui": "#212121", "cterm": "black"      }
+let s:light_black     = { "gui": "#424242", "cterm": "8"          }
+let s:white           = { "gui": "#F1F1F1", "cterm": "white"      }
+let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231"        }
+
+let s:pink            = { "gui": "#C30771", "cterm": "red"        }
+let s:red             = { "gui": "#C30771", "cterm": "darkred"    }
+let s:orange          = { "gui": "#D75F5F", "cterm": "167"        }
+
+let s:blue            = { "gui": "#20BBFC", "cterm": "blue"       }
+let s:dark_blue       = { "gui": "#008EC4", "cterm": "31"         }
+
+let s:green           = { "gui": "#10A778", "cterm": "darkgreen"  }
+
+let s:purple          = { "gui": "#8F8FB7", "cterm": "magenta"    }
+
+let s:dark_yellow     = { "gui": "#DFCF1D", "cterm": "darkyellow" }
+
 
 " maybe pursue something like this: https://github.com/noahfrederick/vim-hemisu/
 "let s:iaWhite           = { 'gui': '#F1F1F1' }
@@ -42,59 +62,79 @@ let g:colors_name='pencil'
 " Purple: #8F8FB7
 " Headings: #4242FF
 
-" preferred groups
+if &background == "dark"
+  let s:bg              = s:black
+  let s:norm            = s:white
+else
+  let s:bg              = s:white
+  let s:norm            = s:light_black
+endif
+
+function! s:h(group, style)
+  execute "highlight" a:group
+    \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
+    \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
+    \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
+    \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
+    \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg.cterm : "NONE")
+    \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg.cterm : "NONE")
+    \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
+endfunction
+
+" common groups ================================================================
 " (see `:h w18`)
-"
-hi Cursor       guifg=#424242    guibg=#20BBFC
-hi Normal       guifg=#424242    guibg=#f1f1f1  gui=none     ctermfg=black        ctermbg=white
-hi Comment      guifg=#10A778                   gui=italic   ctermfg=darkgreen
+
+call s:h("Normal",    {"bg": s:bg, "fg": s:norm})
+call s:h("Cursor",    {"bg": s:blue, "fg": s:norm })
+call s:h("Comment",   {"fg": s:green, "gui": "italic"})
 
 " yellow (was #c033ff)
-hi Constant     guifg=#679707                                ctermfg=darkyellow
-hi String       guifg=#67972F                                ctermfg=darkyellow
-hi Character    guifg=#67972F                                ctermfg=darkyellow
-hi Number       guifg=#672F00                                ctermfg=darkyellow
-hi Boolean      guifg=#67972F                                ctermfg=darkyellow
-hi Float        guifg=#A46F00                                ctermfg=darkyellow
+call s:h("Constant", {"fg": s:dark_yellow})
+hi! link String       Constant
+hi! link Character    Constant
+hi! link Number       Constant
+hi! link Boolean      Constant
+hi! link Float        Constant
 
 " pink
-hi Identifier   guifg=#C30771                                ctermfg=red
-hi Function     guifg=#C30771                                ctermfg=red
+call s:h("Identifier", {"fg": s:pink})
+hi! link Function     Identifier
 
 " blue
-hi Statement    guifg=#008EC4                                ctermfg=darkblue
-hi Conditional  guifg=#008EC4                                ctermfg=darkblue
-hi Repeat       guifg=#008EC4                                ctermfg=darkblue
-hi Label        guifg=#008EC4                                ctermfg=darkblue
-hi Operator     guifg=#008EC4                                ctermfg=darkblue
-hi Keyword      guifg=#008EC4                                ctermfg=darkblue
-hi Exception    guifg=#008EC4                                ctermfg=darkblue
+call s:h("Statement", {"fg": s:dark_blue})
+hi! link Condiitonal  Statement
+hi! link Repeat       Statement
+hi! link Label        Statement
+hi! link Operator     Statement
+hi! link Keyword      Statement
+hi! link Exception    Statement
 
 " green
-hi PreProc      guifg=#10A778                                ctermfg=darkgreen
-hi Include      guifg=#10A778                                ctermfg=darkgreen
-hi Define       guifg=#10A778                                ctermfg=darkgreen
-hi Macro        guifg=#10A778                                ctermfg=darkgreen
-hi PreCondit    guifg=#10A778                                ctermfg=darkgreen
+call s:h("PreProc", {"fg": s:green})
+hi! link Include      PreProc
+hi! link Include      Define
+hi! link Include      Macro
+hi! link Include      PreCondit
 
 " purple
-hi Type           guifg=#8F8FB7                              ctermfg=darkcyan
-hi StorageClass   guifg=#8F8FB7                              ctermfg=darkcyan
-hi Structure      guifg=#8F8FB7                              ctermfg=darkcyan
-hi Typedef        guifg=#8F8FB7                              ctermfg=darkcyan
+call s:h("Type", {"fg": s:purple})
+hi! link StorageClass Type
+hi! link Structure    Type
+hi! link Typedef      Type
 
 " red
-hi Special         guifg=#C30771                             ctermfg=darkred
-hi SpecialChar     guifg=#C30771                             ctermfg=darkred
-hi Tag             guifg=#C30771                             ctermfg=darkred
-hi Delimiter       guifg=#C30771                             ctermfg=darkred
-hi SpecialComment  guifg=#C30771                             ctermfg=darkred
-hi Debug           guifg=#C30771                             ctermfg=darkred
+call s:h("Special", {"fg": s:red})
+hi! link Special      Special
+hi! link SpecialChar  Special
+hi! link Tag          Special
+hi! link Delimiter    Special
+hi! link SpecialComment Special
+hi! link Debug        Special
 
-hi Underlined     guifg=fg                                   ctermfg=fg
-hi Ignore         guifg=bg                                   ctermfg=bg
-hi Error          guifg=#FFFFFF    guibg=#D75F5F        ctermfg=231     ctermbg=167    cterm=bold
-hi Todo           guifg=#D7D7FF    guibg=bg    gui=none ctermfg=231     ctermbg=red    cterm=bold
+call s:h("Underlined", {"fg": s:norm, "gui": "underline", "cterm": "underline"})
+call s:h("Ignore", {"fg": s:bg})
+call s:h("Error",  {"fg": s:actual_white, "bg": s:red, "cterm": "bold"})
+call s:h("Todo",   {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "cterm": "bold"})
 
 "
 " minor groups
