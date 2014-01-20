@@ -18,6 +18,7 @@ let g:colors_name='pencil'
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
+let s:light_grey      = { "gui": "#D9D9D9", "cterm": 7     }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
 let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 
@@ -25,9 +26,9 @@ let s:pink            = { "gui": "#C30771", "cterm": "9"   }
 let s:red             = { "gui": "#C30771", "cterm": "1"   }
 let s:orange          = { "gui": "#D75F5F", "cterm": "167" }
 
-let s:blue            = { "gui": "#20BBFC", "cterm": "4"   }
-let s:light_blue      = { "gui": "#b6d6fd", "cterm": "12"  }
-let s:dark_blue       = { "gui": "#008EC4", "cterm": "31"  }
+let s:blue            = { "gui": "#20BBFC", "cterm": "12"  }
+let s:light_blue      = { "gui": "#b6d6fd", "cterm": "153" }
+let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
 
 let s:green           = { "gui": "#10A778", "cterm": "2"   }
 
@@ -155,8 +156,8 @@ hi StatusLine      guifg=fg      guibg=#D9D9D9    gui=none ctermfg=fg  ctermbg=b
 hi StatusLineNC    guifg=grey50  guibg=#D9D9D9    gui=none ctermfg=fg ctermbg=bg cterm=none
 hi VertSplit      guifg=fg       guibg=#D9D9D9    gui=none ctermfg=244    ctermbg=bg    cterm=none
 hi Title          guifg=DarkBlue                  ctermfg=109
-hi Visual         guifg=fg       guibg=#b6d6fd            ctermfg=fg     ctermbg=117
-hi VisualNOS      guifg=fg       guibg=#D4D4D4            ctermfg=bg     ctermbg=244
+call s:h("Visual", {"bg": s:light_blue})
+call s:h("VisualNOS", {"bg": s:light_grey})
 hi WarningMsg     guifg=#AF87D7               ctermfg=140
 hi WildMenu       guifg=#F1F1F1  guibg=#262626    gui=none  ctermfg=71     ctermbg=bg    cterm=none
 hi Folded          guifg=#808080    guibg=bg       ctermfg=244    ctermbg=bg
