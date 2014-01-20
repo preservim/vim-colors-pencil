@@ -16,23 +16,24 @@ endif
 let g:colors_name='pencil'
 
 " Colors
-let s:black           = { "gui": "#212121", "cterm": "black"      }
-let s:light_black     = { "gui": "#424242", "cterm": "8"          }
-let s:white           = { "gui": "#F1F1F1", "cterm": "white"      }
-let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231"        }
+let s:black           = { "gui": "#212121", "cterm": "0"   }
+let s:light_black     = { "gui": "#424242", "cterm": "8"   }
+let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
+let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 
-let s:pink            = { "gui": "#C30771", "cterm": "red"        }
-let s:red             = { "gui": "#C30771", "cterm": "darkred"    }
-let s:orange          = { "gui": "#D75F5F", "cterm": "167"        }
+let s:pink            = { "gui": "#C30771", "cterm": "9"   }
+let s:red             = { "gui": "#C30771", "cterm": "1"   }
+let s:orange          = { "gui": "#D75F5F", "cterm": "167" }
 
-let s:blue            = { "gui": "#20BBFC", "cterm": "blue"       }
-let s:dark_blue       = { "gui": "#008EC4", "cterm": "31"         }
+let s:blue            = { "gui": "#20BBFC", "cterm": "4"   }
+let s:light_blue      = { "gui": "#b6d6fd", "cterm": "12"  }
+let s:dark_blue       = { "gui": "#008EC4", "cterm": "31"  }
 
-let s:green           = { "gui": "#10A778", "cterm": "darkgreen"  }
+let s:green           = { "gui": "#10A778", "cterm": "2"   }
 
-let s:purple          = { "gui": "#8F8FB7", "cterm": "magenta"    }
+let s:purple          = { "gui": "#8F8FB7", "cterm": "5"   }
 
-let s:dark_yellow     = { "gui": "#DFCF1D", "cterm": "darkyellow" }
+let s:dark_yellow     = { "gui": "#DFCF1D", "cterm": "3"   }
 
 
 " maybe pursue something like this: https://github.com/noahfrederick/vim-hemisu/
