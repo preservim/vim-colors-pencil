@@ -1,6 +1,6 @@
 " Vim Color File
 " Name:       pencil.vim
-" Version:    0.1
+" Version:    0.2
 " Maintainer: github.com/reedes github.com/mattly
 
 hi clear
@@ -177,7 +177,7 @@ call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("WarningMsg",    {"fg": s:red})
 call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
 call s:h("Folded",        {"fg": s:medium_grey})
-call s:h("FoldColumn",    {"fg": s:light_green})
+call s:h("FoldColumn",    {"fg": s:bg_subtle})
 call s:h("DiffAdd",       {"fg": s:green})
 call s:h("DiffDelete",    {"fg": s:red})
 call s:h("DiffChange",    {"fg": s:dark_yellow})
@@ -238,13 +238,11 @@ hi link xmlTagName      Conditional
 hi link xmlEndTag       Identifier
 
 " Signify, git-gutter
-" We're not defaulting to diff, as these are meant to be subtle
-highlight SignifySignAdd    guifg=#99DD99 guibg=NONE  cterm=bold ctermbg=237  ctermfg=119
-highlight SignifySignDelete guifg=#FFCCCC guibg=NONE  cterm=bold ctermbg=237  ctermfg=167
-highlight SignifySignChange guifg=#CCCCFF guibg=NONE  cterm=bold ctermbg=237  ctermfg=227
-
-highlight GitGutterAdd          guifg=#99DD99 guibg=NONE  cterm=bold ctermbg=237  ctermfg=119    
-highlight GitGutterDelete       guifg=#FFCCCC guibg=NONE  cterm=bold ctermbg=237  ctermfg=167  
-highlight GitGutterChange       guifg=#CCCCFF guibg=NONE  cterm=bold ctermbg=237  ctermfg=227   
-highlight GitGutterChangeDelete guifg=#CCCCFF guibg=NONE  cterm=bold ctermbg=237  ctermfg=227
+hi link SignifySignAdd      LineNr
+hi link SignifySignDelete   LineNr
+hi link SignifySignChange   LineNr
+hi link GitGutterAdd        LineNr
+hi link GitGutterDelete     LineNr
+hi link GitGutterChange     LineNr
+hi link GitGutterChangeDelete LineNr
 
