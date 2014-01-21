@@ -16,7 +16,7 @@ does have a nice colorscheme, however.
 
 ## Requirements
 
-May require a recent version of Vim.
+Currently requires vim >= 7.0
 
 ## Installation
 
@@ -34,6 +34,14 @@ Just like any other colorscheme:
 ```
 
 ![vimscript-example](screenshots/vimscript-example.png)
+
+There is a work-in-progress dark version, just set your background:
+
+```vim
+:set background=dark
+```
+
+![bash-example-dark](screenshots/bash-example-dark.png)
 
 ## Differences
 
