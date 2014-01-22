@@ -55,13 +55,15 @@ iA Writer uses a typeface called ‘Nitti Light’ by Blue Monday. ($)
 
 Free alternatives with bold and italic support include:
 
-* [Anonymous Pro](https://www.google.com/fonts/specimen/Anonymous+Pro)
-* [Courier Prime](http://quoteunquoteapps.com/courierprime/)
+* [Anonymous Pro](https://www.google.com/fonts/specimen/Anonymous+Pro) (serif)
+* [Courier Prime](http://quoteunquoteapps.com/courierprime/) (serif)
 * [Cousine](http://www.google.com/fonts/specimen/Cousine)
 * [DejaVu Sans Mono](http://dejavu-fonts.org/wiki/Download)
 * [Liberation](https://fedorahosted.org/liberation-fonts/)
-* [Luxi Mono Regular](http://www.fontsquirrel.com/fonts/Luxi-Mono)
+* [Luxi Mono Regular](http://www.fontsquirrel.com/fonts/Luxi-Mono) (serif)
 * [Ubuntu Mono](https://www.google.com/fonts/specimen/Ubuntu+Mono)
+
+Cousine is a good match for Nitti Light.
 
 ## See also
 
@@ -71,7 +73,7 @@ Free alternatives with bold and italic support include:
 [ip]: https://github.com/mattly/iterm-colors-pencil
 
 If you find this plugin useful, you may want to check out these others by
-the same author:
+[@reedes][re]:
 
 * [vim-lexical][lx] - building on Vim’s spell-check and thesaurus/dictionary completion
 * [vim-litecorrect][lc] - lightweight auto-correction for Vim
@@ -80,6 +82,7 @@ the same author:
 * [vim-thematic][th] — modify Vim’s appearance to suit your task and environment 
 * [vim-wordy][wo] - uncovering usage problems in writing 
 
+[re]: https://github.com/reedes
 [lx]: http://github.com/reedes/vim-lexical
 [lc]: http://github.com/reedes/vim-litecorrect
 [pn]: http://github.com/reedes/vim-pencil
