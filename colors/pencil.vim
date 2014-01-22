@@ -206,48 +206,56 @@ call s:h("CursorLine",    {"bg": s:bg_very_subtle})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 " remainder of syntax highlighting
-hi MatchParen     guifg=fg        guibg=#F7DF94   ctermfg=16     ctermbg=72
+call s:h("MatchParen",    {"bg": s:pink, "fg": s:norm})
 
-hi helpHyperTextJump guifg=#5FAFD7 ctermfg=74
+" hi helpHyperTextJump guifg=#5FAFD7 ctermfg=74
 
-hi htmlItalic     guifg=fg      guibg=NONE gui=italic      ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlBold       guifg=fg      guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlBoldItalic guifg=fg      guibg=NONE gui=bold,italic ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH1         guifg=#226292 guibg=NONE gui=bold,italic ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH2         guifg=#226282 guibg=NONE gui=bold        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH3         guifg=#325272 guibg=NONE gui=italic      ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH4         guifg=#325262 guibg=NONE gui=NONE        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH5         guifg=#424252 guibg=NONE gui=NONE        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlH6         guifg=#424242 guibg=NONE gui=NONE        ctermfg=38  ctermbg=NONE cterm=bold
-hi htmlLink       guifg=#424242 guibg=NONE gui=NONE        ctermfg=185 ctermbg=NONE cterm=NONE
-hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
-hi htmlTagName    guifg=fg      guibg=NONE gui=NONE        ctermfg=182 ctermbg=NONE cterm=NONE
-hi link htmlTag         Keyword
-hi link htmlEndTag      Identifier
-hi link htmlTagName     Conditional
+" HTML syntax
+hi! link htmlTag          Special
+hi! link htmlEndTag       htmlTag
+
+hi! link htmlTagName      KeyWord
+" html5 tags show up as htmlTagN
+hi! link htmlTagN         Keyword
+
+" HTML content
+call s:h("htmlItalic",    {"gui": "italic", "cterm": "bold"})
+call s:h("htmlBold",      {"gui": "bold", "cterm": "bold"})
+call s:h("htmlBoldItalic",{"gui": "bold,italic", "cterm": "bold"})
+call s:h("htmlH1",        {"fg": s:dark_blue})
+call s:h("htmlH2",        {"fg": s:dark_blue})
+call s:h("htmlH3",        {"fg": s:blue})
+call s:h("htmlH4",        {"fg": s:blue})
+call s:h("htmlH5",        {"fg": s:dark_cyan})
+call s:h("htmlH6",        {"fg": s:dark_cyan})
+call s:h("htmlLink",      {"fg": s:blue, "gui": "underline", "cterm": "underline"})
+" hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 
 " tpope/vim-markdown
 " Needed to retain the syntax highlighting for code
 " TODO support for plasticboy/vim-markdown as well
-hi markdownHeadingDelimiter  guifg=#424242
-hi markdownRule              guifg=#424242
-hi markdownIdDeclaration     guifg=#424242
-hi markdownId                guifg=#999999
-hi markdownIdDelimiter       guifg=#999999
-hi markdownLinkTextDelimiter guifg=#999999
-hi markdownLinkDelimiter     guifg=#999999
-hi markdownUrl               guifg=#999999
+hi! link markdownLinkText           String
+hi! link markdownUrl                htmlLink
+hi! link markdownId                 Constant
 
-hi link xmlTag          Keyword
-hi link xmlTagName      Conditional
-hi link xmlEndTag       Identifier
+hi! link markdownDelimiter          Delimiter
+hi! link markdownHeadingDelimiter   markdownDelimiter
+" hi markdownRule              guifg=#424242
+hi! link markdownIdDelimiter        markdownDelimiter
+hi! link markdownLinkTextDelimiter  markdownDelimiter
+hi! link markdownLinkDelimiter      markdownDelimiter
+hi! link markdownIdDeclaration      Constant
+
+hi! link xmlTag                     htmlTag
+hi! link xmlEndTag                  xmlTag
+hi! link xmlTagName                 htmlTagName
 
 " Signify, git-gutter
-hi link SignifySignAdd      LineNr
-hi link SignifySignDelete   LineNr
-hi link SignifySignChange   LineNr
-hi link GitGutterAdd        LineNr
-hi link GitGutterDelete     LineNr
-hi link GitGutterChange     LineNr
-hi link GitGutterChangeDelete LineNr
+hi link SignifySignAdd              LineNr
+hi link SignifySignDelete           LineNr
+hi link SignifySignChange           LineNr
+hi link GitGutterAdd                LineNr
+hi link GitGutterDelete             LineNr
+hi link GitGutterChange             LineNr
+hi link GitGutterChangeDelete       LineNr
 
