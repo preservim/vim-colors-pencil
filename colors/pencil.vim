@@ -13,7 +13,7 @@ let g:colors_name='pencil'
 
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
-let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
+let s:subtle_black    = { "gui": "#262626", "cterm": "235" }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 let s:medium_grey     = { "gui": "#767676", "cterm": "243" }
@@ -108,51 +108,50 @@ endfunction
 " common groups ================================================================
 " (see `:h w18`)
 
-call s:h("Normal",    {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",    {"bg": s:blue, "fg": s:norm })
-call s:h("Comment",   {"fg": s:medium_grey, "gui": "italic"})
+call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
+call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
+call s:h("Comment",       {"fg": s:medium_grey, "gui": "italic"})
 
-call s:h("Constant", {"fg": s:green})
-hi! link String       Constant
-hi! link Character    Constant
-hi! link Number       Constant
-hi! link Boolean      Constant
-hi! link Float        Constant
+call s:h("Constant",      {"fg": s:cyan})
+hi! link String           Constant
+hi! link Character        Constant
+hi! link Number           Constant
+hi! link Boolean          Constant
+hi! link Float            Constant
 
-call s:h("Identifier", {"fg": s:pink})
-hi! link Function     Identifier
+call s:h("Identifier",    {"fg": s:dark_blue})
+hi! link Function         Identifier
 
-call s:h("Statement", {"fg": s:dark_blue})
-hi! link Conditonal  Statement
-hi! link Repeat       Statement
-hi! link Label        Statement
-hi! link Operator     Statement
-hi! link Keyword      Statement
-hi! link Exception    Statement
+call s:h("Statement",     {"fg": s:green})
+hi! link Conditonal       Statement
+hi! link Repeat           Statement
+hi! link Label            Statement
+hi! link Operator         Statement
+hi! link Keyword          Statement
+hi! link Exception        Statement
 
-call s:h("PreProc", {"fg": s:purple})
-hi! link Include      PreProc
-hi! link Define       PreProc
-hi! link Macro        PreProc
-hi! link PreCondit    PreProc
+call s:h("PreProc",       {"fg": s:red})
+hi! link Include          PreProc
+hi! link Define           PreProc
+hi! link Macro            PreProc
+hi! link PreCondit        PreProc
 
-call s:h("Type", {"fg": s:cyan})
-hi! link StorageClass Type
-hi! link Structure    Type
-hi! link Typedef      Type
+call s:h("Type",          {"fg": s:purple})
+hi! link StorageClass     Type
+hi! link Structure        Type
+hi! link Typedef          Type
 
-call s:h("Special", {"fg": s:red})
-hi! link Special      Special
-hi! link SpecialChar  Special
-hi! link Tag          Special
-hi! link Delimiter    Special
-hi! link SpecialComment Special
-hi! link Debug        Special
+call s:h("Special",       {"fg": s:pink})
+hi! link SpecialChar      Special
+hi! link Tag              Special
+hi! link Delimiter        Special
+hi! link SpecialComment   Special
+hi! link Debug            Special
 
-call s:h("Underlined", {"fg": s:norm, "gui": "underline", "cterm": "underline"})
-call s:h("Ignore", {"fg": s:bg})
-call s:h("Error",  {"fg": s:actual_white, "bg": s:red, "cterm": "bold"})
-call s:h("Todo",   {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "cterm": "bold"})
+call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
+call s:h("Ignore",        {"fg": s:bg})
+call s:h("Error",         {"fg": s:actual_white, "bg": s:red, "cterm": "bold"})
+call s:h("Todo",          {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "cterm": "bold"})
 
 " ui chrome ====================================================================
 " ordered according to `:help hitest.vim`
@@ -162,15 +161,15 @@ call s:h("NonText",       {"fg": s:medium_grey})
 call s:h("Directory",     {"fg": s:blue})
 call s:h("ErrorMsg",      {"fg": s:pink})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
-call s:h("Search",        {"bg": s:yellow, "fg": s:light_black})
+call s:h("Search",        {"bg": s:bg_subtle})
 call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
 call s:h("CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
 call s:h("Question",      {"fg": s:red})
-call s:h("StatusLine",    {"bg": s:bg_subtle})
-call s:h("StatusLineNC",  {"bg": s:bg_subtle, "fg": s:medium_grey})
-call s:h("VertSplit",     {"bg": s:bg_subtle, "fg": s:bg_subtle})
+call s:h("StatusLine",    {"bg": s:bg_very_subtle})
+call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_grey})
+call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
 call s:h("Title",         {"fg": s:dark_blue})
 call s:h("Visual",        {"bg": s:visual})
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
@@ -184,21 +183,27 @@ call s:h("DiffChange",    {"fg": s:dark_yellow})
 call s:h("DiffText",      {"fg": s:dark_blue})
 call s:h("SignColumn",    {"fg": s:light_green})
 " hi Conceal
-let s:spelling = "gui=undercurl cterm=underline guibg=NONE ctermbg=NONE "
-exe "hi SpellBad " .s:spelling ."guisp=" .s:red.gui ." ctermfg=" .s:red.cterm
-exe "hi SpellCap " .s:spelling ."guisp=" .s:light_green.gui ." ctermfg=" .s:light_green.cterm
-exe "hi SpellRare " .s:spelling ."ctermfg=" .s:pink.cterm
-exe "hi SpellLocal " .s:spelling ."ctermfg=" .s:dark_green.cterm
+if has("gui_running")
+  call s:h("SpellBad",    {"gui": "undercurl", "guisp": s.red})
+  call s:h("SpellCap",    {"gui": "undercurl", "guisp": s.light_green})
+  call s:h("SpellRare",   {"gui": "undercurl", "guisp": s.pink})
+  call s:h("SpellLocal",  {"gui": "undercurl", "guisp": s.dark_green})
+else
+  call s:h("SpellBad",    {"cterm": "underline", "fg": s:red})
+  call s:h("SpellCap",    {"cterm": "underline", "fg": s:light_green})
+  call s:h("SpellRare",   {"cterm": "underline", "fg": s:pink})
+  call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
+endif
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("TabLineSel",    {"fg": s:norm, "bg": s:blue})
-call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_subtle})
+call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
+call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
+call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
 call s:h("CursorLine",    {"bg": s:bg_very_subtle})
-call s:h("ColorColumn",   {"fg": s:cyan, "bg": s:bg_subtle})
+call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 " remainder of syntax highlighting
 hi MatchParen     guifg=fg        guibg=#F7DF94   ctermfg=16     ctermbg=72
