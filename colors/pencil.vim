@@ -17,19 +17,19 @@ endif
 
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
-let s:medium_grey     = { "gui": "#767676", "cterm": "243" }
+let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
 let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 if g:pencil_higher_contrast_ui == 0
   let s:subtle_black  = { "gui": "#262626", "cterm": "235" }
-  let s:light_grey    = { "gui": "#D9D9D9", "cterm": "253" }
-  let s:lighter_grey  = { "gui": "#E5E6E6", "cterm": "254" }
+  let s:light_gray    = { "gui": "#D9D9D9", "cterm": "253" }
+  let s:lighter_gray  = { "gui": "#E5E6E6", "cterm": "254" }
 else
   let s:subtle_black  = { "gui": "#303030", "cterm": "236" }
-  let s:light_grey    = { "gui": "#BCBCBC", "cterm": "250" }
-  let s:lighter_grey  = { "gui": "#D0D0D0", "cterm": "252" }
+  let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249" }
+  let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251" }
 endif
 
 let s:pink            = { "gui": "#fb007a", "cterm": "9"   }
@@ -67,7 +67,7 @@ let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 "let s:iaBlue            = { 'gui': '#B5D6FD' }
 "let s:iaGreen           = { 'gui': '#30C798' }   darkened to: #10A778
 "let s:iaBlue2           = { 'gui': '#1DAEE4' }   darkened to: #008EC4
-"let s:iaGrey            = { 'gui': '#999999' }   lightened to: #D9D9D9
+"let s:iagray            = { 'gui': '#999999' }   lightened to: #D9D9D9
 "let s:iaRed             = { 'gui': '#E32791' }   darkened to: #C30771
 "let s:iaUnfocusedText   = { 'gui': '#B8B8B8' }
 "let s:iaMenuSelected    = { 'gui': '#2C81FB' }
@@ -86,15 +86,15 @@ if &background == "dark"
   let s:bg_subtle       = s:light_black
   let s:bg_very_subtle  = s:subtle_black
   let s:norm            = s:white
-  let s:norm_subtle     = s:light_grey
+  let s:norm_subtle     = s:light_gray
   let s:purple          = s:light_purple
   let s:cyan            = s:light_cyan
   let s:green           = s:light_green
   let s:visual          = s:light_black
 else
   let s:bg              = s:white
-  let s:bg_subtle       = s:light_grey
-  let s:bg_very_subtle  = s:lighter_grey
+  let s:bg_subtle       = s:light_gray
+  let s:bg_very_subtle  = s:lighter_gray
   let s:norm            = s:light_black
   let s:norm_subtle     = s:lighter_black
   let s:purple          = s:dark_purple
@@ -120,7 +120,7 @@ endfunction
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
-call s:h("Comment",       {"fg": s:medium_grey, "gui": "italic"})
+call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic"})
 
 call s:h("Constant",      {"fg": s:cyan})
 hi! link String           Constant
@@ -167,25 +167,25 @@ call s:h("Todo",          {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "c
 " ordered according to `:help hitest.vim`
 
 call s:h("SpecialKey",    {"fg": s:light_green})
-call s:h("NonText",       {"fg": s:medium_grey})
+call s:h("NonText",       {"fg": s:medium_gray})
 call s:h("Directory",     {"fg": s:blue})
 call s:h("ErrorMsg",      {"fg": s:pink})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
 call s:h("Search",        {"bg": s:bg_subtle})
-call s:h("MoreMsg",       {"fg": s:medium_grey, "cterm": "bold", "gui": "bold"})
+call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
 call s:h("CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg_very_subtle})
-call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_grey})
+call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
 call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
 call s:h("Title",         {"fg": s:dark_blue})
 call s:h("Visual",        {"bg": s:visual})
 call s:h("VisualNOS",     {"bg": s:bg_subtle})
 call s:h("WarningMsg",    {"fg": s:red})
 call s:h("WildMenu",      {"fg": s:bg, "bg": s:norm})
-call s:h("Folded",        {"fg": s:medium_grey})
+call s:h("Folded",        {"fg": s:medium_gray})
 call s:h("FoldColumn",    {"fg": s:bg_subtle})
 call s:h("DiffAdd",       {"fg": s:green})
 call s:h("DiffDelete",    {"fg": s:red})
@@ -217,7 +217,7 @@ call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 " remainder of syntax highlighting
 call s:h("MatchParen",    {"bg": s:pink, "fg": s:norm})
-call s:h("qfLineNr",      {"fg": s:medium_grey})
+call s:h("qfLineNr",      {"fg": s:medium_gray})
 
 " hi helpHyperTextJump guifg=#5FAFD7 ctermfg=74
 
