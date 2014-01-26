@@ -11,16 +11,26 @@ endif
 
 let g:colors_name='pencil'
 
+if ! exists("g:pencil_higher_contrast_ui")
+  let g:pencil_higher_contrast_ui = 0
+endif
+
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
-let s:subtle_black    = { "gui": "#262626", "cterm": "235" }
-let s:light_black     = { "gui": "#424242", "cterm": "8"   }
-let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 let s:medium_grey     = { "gui": "#767676", "cterm": "243" }
-let s:light_grey      = { "gui": "#D9D9D9", "cterm": "253" }
-let s:lighter_grey    = { "gui": "#E5E6E6", "cterm": "254" }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
 let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
+let s:light_black     = { "gui": "#424242", "cterm": "8"   }
+let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
+if g:pencil_higher_contrast_ui == 0
+  let s:subtle_black  = { "gui": "#262626", "cterm": "235" }
+  let s:light_grey    = { "gui": "#D9D9D9", "cterm": "253" }
+  let s:lighter_grey  = { "gui": "#E5E6E6", "cterm": "254" }
+else
+  let s:subtle_black  = { "gui": "#303030", "cterm": "236" }
+  let s:light_grey    = { "gui": "#BCBCBC", "cterm": "250" }
+  let s:lighter_grey  = { "gui": "#D0D0D0", "cterm": "252" }
+endif
 
 let s:pink            = { "gui": "#fb007a", "cterm": "9"   }
 let s:red             = { "gui": "#C30771", "cterm": "1"   }
