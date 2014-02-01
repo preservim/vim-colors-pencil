@@ -81,6 +81,7 @@ If you find this plugin useful, you may want to check out these others by
 * [vim-quotable][qu] - extends Vim to support typographic (‘curly’) quotes
 * [vim-textobj-sentence][ts] - improving on Vim's native sentence motion command
 * [vim-thematic][th] — modify Vim’s appearance to suit your task and environment 
+* [vim-wheel][wh] - screen-anchored cursor movement for Vim
 * [vim-wordy][wo] - uncovering usage problems in writing 
 
 [re]: https://github.com/reedes
@@ -90,6 +91,7 @@ If you find this plugin useful, you may want to check out these others by
 [qu]: http://github.com/reedes/vim-quotable
 [ts]: http://github.com/reedes/vim-textobj-sentence
 [th]: http://github.com/reedes/vim-thematic
+[wh]: http://github.com/reedes/vim-wheel
 [wo]: http://github.com/reedes/vim-wordy
 
 The [README](https://github.com/reedes/vim-thematic) in
