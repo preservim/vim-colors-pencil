@@ -1,7 +1,32 @@
 " Vim Color File
 " Name:       pencil.vim
-" Version:    0.2
+" Version:    0.3
 " Maintainer: github.com/reedes github.com/mattly
+
+" Original iA Writer colors, to use as a guide
+" White           #F1F1F1
+" OffWhiteIPad    #F5F2EC
+" OffWhiteDemo    #F9F8F4
+" Cursor          #20BBFC
+" Selection       #B6D6FD
+" SelectionNOS    #D4D4D4
+" StatusBar       #EDEDED
+" StatusBarBorder #D9D9D9   used for search too
+" Text            #424242
+" Blue            #B5D6FD
+" Green           #30C798
+" Blue2           #1DAEE4
+" gray            #999999
+" Red             #E32791
+" UnfocusedText   #B8B8B8
+" MenuSelected    #2C81FB
+" MenuUnSelected  #545454
+" MenuText        #F1F1F1
+" LightKeyBg      #4B4B4B
+" DarkKeyBg       #262626
+" NearBlack       #181818
+" SyntaxButton    #363738
+" SearchHighlight #F3E430  yellow
 
 hi clear
 
@@ -51,35 +76,6 @@ let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
 
 let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
-
-
-
-" maybe pursue something like this: https://github.com/noahfrederick/vim-hemisu/
-"let s:iaWhite           = { 'gui': '#F1F1F1' }
-"let s:iaOffWhiteIPad    = { 'gui': '#F5F2EC' }
-"let s:iaOffWhiteDemo    = { 'gui': '#F9F8F4' }
-"let s:iaCursor          = { 'gui': '#20BBFC' }
-"let s:iaSelection       = { 'gui': '#B6D6FD' }
-"let s:iaSelectionNOS    = { 'gui': '#D4D4D4' }
-"let s:iaStatusBar       = { 'gui': '#EDEDED' }
-"let s:iaStatusBarBorder = { 'gui': '#D9D9D9' }   used for search too
-"let s:iaText            = { 'gui': '#424242' }
-"let s:iaBlue            = { 'gui': '#B5D6FD' }
-"let s:iaGreen           = { 'gui': '#30C798' }   darkened to: #10A778
-"let s:iaBlue2           = { 'gui': '#1DAEE4' }   darkened to: #008EC4
-"let s:iagray            = { 'gui': '#999999' }   lightened to: #D9D9D9
-"let s:iaRed             = { 'gui': '#E32791' }   darkened to: #C30771
-"let s:iaUnfocusedText   = { 'gui': '#B8B8B8' }
-"let s:iaMenuSelected    = { 'gui': '#2C81FB' }
-"let s:iaMenuUnSelected  = { 'gui': '#545454' }
-"let s:iaMenuText        = { 'gui': '#F1F1F1' }
-"let s:iaLightKeyBg      = { 'gui': '#4B4B4B' }
-"let s:iaDarkKeyBg       = { 'gui': '#262626' }
-"let s:iaNearBlack       = { 'gui': '#181818' }
-"let s:iaSyntaxButton    = { 'gui': '#363738' }
-"let s:iaSearchHighlight = { 'gui': '#F3E430' }  yellow
-" Purple: #8F8FB7
-" Headings: #4242FF
 
 if &background == "dark"
   let s:bg              = s:black
@@ -194,10 +190,10 @@ call s:h("DiffText",      {"fg": s:dark_blue})
 call s:h("SignColumn",    {"fg": s:light_green})
 " hi Conceal
 if has("gui_running")
-  call s:h("SpellBad",    {"gui": "undercurl", "guisp": s:red})
-  call s:h("SpellCap",    {"gui": "undercurl", "guisp": s:light_green})
-  call s:h("SpellRare",   {"gui": "undercurl", "guisp": s:pink})
-  call s:h("SpellLocal",  {"gui": "undercurl", "guisp": s:dark_green})
+  call s:h("SpellBad",    {"gui": "undercurl", "sp": s:red})
+  call s:h("SpellCap",    {"gui": "undercurl", "sp": s:light_green})
+  call s:h("SpellRare",   {"gui": "undercurl", "sp": s:pink})
+  call s:h("SpellLocal",  {"gui": "undercurl", "sp": s:dark_green})
 else
   call s:h("SpellBad",    {"cterm": "underline", "fg": s:red})
   call s:h("SpellCap",    {"cterm": "underline", "fg": s:light_green})
@@ -242,21 +238,31 @@ call s:h("htmlH6",        {"fg": s:dark_cyan})
 call s:h("htmlLink",      {"fg": s:blue, "gui": "underline", "cterm": "underline"})
 " hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 
-" tpope/vim-markdown
-" Needed to retain the syntax highlighting for code
-" TODO support for plasticboy/vim-markdown as well
-hi! link markdownLinkText           String
-hi! link markdownUrl                htmlLink
-hi! link markdownId                 Constant
+" Markdown content
+call s:h("markdownH1",                  {"fg": s:norm_subtle, "gui": "bold,italic"})
+call s:h("markdownH2",                  {"fg": s:norm_subtle, "gui": "bold"})
+call s:h("markdownH3",                  {"fg": s:norm_subtle, "gui": "italic"})
+call s:h("markdownH4",                  {"fg": s:norm_subtle, "gui": "italic"})
+call s:h("markdownH5",                  {"fg": s:norm_subtle})
+call s:h("markdownH6",                  {"fg": s:norm_subtle})
+call s:h("markdownCodeDelimiter",       {"fg": s:norm})
+call s:h("markdownHeadingDelimiter",    {"fg": s:norm})
+call s:h("markdownHeadingRule",         {"fg": s:norm})
+call s:h("markdownRule",                {"fg": s:norm})
+call s:h("markdownId",                  {"fg": s:norm})
+call s:h("markdownIdDeclaration",       {"fg": s:norm_subtle})
+call s:h("markdownLinkText",            {"fg": s:norm})
+call s:h("markdownLinkTextDelimiter",   {"fg": s:medium_gray})
+call s:h("markdownListMarker",          {"fg": s:norm})
+call s:h("markdownLinkDelimiter",       {"fg": s:medium_gray})
+call s:h("markdownUrl",                 {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
+call s:h("markdownUrlDelimiter",        {"fg": s:medium_gray})
+call s:h("markdownUrlTitle",            {"fg": s:norm})
+call s:h("markdownUrlTitleDelimiter",   {"fg": s:medium_gray})
+call s:h("markdownOrderedListMarker",   {"fg": s:norm})
+call s:h("markdownBlockquote",          {"fg": s:medium_gray})
 
-hi! link markdownDelimiter          Delimiter
-hi! link markdownHeadingDelimiter   markdownDelimiter
-" hi markdownRule              guifg=#424242
-hi! link markdownIdDelimiter        markdownDelimiter
-hi! link markdownLinkTextDelimiter  markdownDelimiter
-hi! link markdownLinkDelimiter      markdownDelimiter
-hi! link markdownIdDeclaration      Constant
-
+" XML content
 hi! link xmlTag                     htmlTag
 hi! link xmlEndTag                  xmlTag
 hi! link xmlTagName                 htmlTagName
