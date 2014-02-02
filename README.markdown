@@ -2,7 +2,7 @@
 
 > A light (and dark) color scheme for Vim inspired by iA Writer
 
-![markdown-example](screenshots/markdown-example.png)
+![markdown-example](screenshots/markdown-example2.png)
 
 ## Features
 
@@ -14,7 +14,7 @@ does have a nice colorscheme, however.
 * Use for both code and prose, though it’s definitely geared towards the
   latter
 * Light and dark variants
-* iTerm color scheme available, for use in console-based Vim
+* iTerm color scheme available, for use in terminal-based Vim
 
 ## Requirements
 
@@ -51,7 +51,7 @@ are inside the left margin. Here we use color instead.
 
 iA Writer uses a typeface called ‘Nitti Light’ by Blue Monday. ($)
 
-Free alternatives with bold and italic support include:
+Free alternatives with **bold** and _italic_ support include:
 
 * [Anonymous Pro](https://www.google.com/fonts/specimen/Anonymous+Pro) (serif)
 * [Courier Prime](http://quoteunquoteapps.com/courierprime/) (serif)
