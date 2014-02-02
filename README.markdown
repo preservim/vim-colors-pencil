@@ -1,6 +1,6 @@
 # vim-colors-pencil
 
-> A light color scheme for Vim inspired by iA Writer
+> A light (and dark) color scheme for Vim inspired by iA Writer
 
 ![markdown-example](screenshots/markdown-example.png)
 
@@ -13,6 +13,7 @@ does have a nice colorscheme, however.
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
 * Use for both code and prose, though it’s definitely geared towards the
   latter
+* Light and dark variants
 
 ## Requirements
 
@@ -41,9 +42,9 @@ There is a work-in-progress dark version, just set your background:
 
 ## Differences
 
-Most notably, the ‘#’ heading text is shaded blue. This is to compensate
-for the lack of a visual cue found in iA Writer where the heading
-indicators are inside the left margin. Here we use color instead.
+Most notably, the ‘#’ heading text is shaded blue. This compensates for
+the lack of a visual cue found in iA Writer where the heading indicators
+are inside the left margin. Here we use color instead.
 
 ## Font choices
 
@@ -94,9 +95,6 @@ The [README](https://github.com/reedes/vim-thematic) in
 _thematic_ has more details on setting up emulation of iA Writer.
 
 ## Future development
-
-Eventually there’ll be a dark equivalent included in this 
-colorscheme.
 
 If you’ve spotted a problem or have an idea on improving this color
 scheme, please post it to the github project issue page.
