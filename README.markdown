@@ -14,6 +14,7 @@ does have a nice colorscheme, however.
 * Use for both code and prose, though it’s definitely geared towards the
   latter
 * Light and dark variants
+* iTerm color scheme available, for use in console-based Vim
 
 ## Requirements
 
