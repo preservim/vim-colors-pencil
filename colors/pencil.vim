@@ -239,12 +239,12 @@ call s:h("htmlLink",      {"fg": s:blue, "gui": "underline", "cterm": "underline
 " hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 
 " Markdown content
-call s:h("markdownH1",                  {"fg": s:norm_subtle, "gui": "bold,italic"})
-call s:h("markdownH2",                  {"fg": s:norm_subtle, "gui": "bold"})
-call s:h("markdownH3",                  {"fg": s:norm_subtle, "gui": "italic"})
-call s:h("markdownH4",                  {"fg": s:norm_subtle, "gui": "italic"})
-call s:h("markdownH5",                  {"fg": s:norm_subtle})
-call s:h("markdownH6",                  {"fg": s:norm_subtle})
+call s:h("markdownH1",                  {"fg": s:dark_blue, "gui": "bold,italic"})
+call s:h("markdownH2",                  {"fg": s:dark_blue, "gui": "bold"})
+call s:h("markdownH3",                  {"fg": s:dark_blue, "gui": "italic"})
+call s:h("markdownH4",                  {"fg": s:dark_blue, "gui": "italic"})
+call s:h("markdownH5",                  {"fg": s:dark_blue})
+call s:h("markdownH6",                  {"fg": s:dark_blue})
 call s:h("markdownCodeDelimiter",       {"fg": s:norm})
 call s:h("markdownHeadingDelimiter",    {"fg": s:norm})
 call s:h("markdownHeadingRule",         {"fg": s:norm})
