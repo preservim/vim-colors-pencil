@@ -1,6 +1,6 @@
 " Vim Color File
 " Name:       pencil.vim
-" Version:    0.3
+" Version:    0.4
 " Maintainer: github.com/reedes github.com/mattly
 
 " Original iA Writer colors, to use as a guide
@@ -81,7 +81,7 @@ if &background == "dark"
   let s:bg              = s:black
   let s:bg_subtle       = s:light_black
   let s:bg_very_subtle  = s:subtle_black
-  let s:norm            = s:white
+  let s:norm            = s:lighter_gray
   let s:norm_subtle     = s:light_gray
   let s:purple          = s:light_purple
   let s:cyan            = s:light_cyan

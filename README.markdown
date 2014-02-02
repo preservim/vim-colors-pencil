@@ -33,15 +33,11 @@ Just like any other colorscheme:
 :colorscheme pencil
 ```
 
-![vimscript-example](screenshots/vimscript-example.png)
-
 There is a work-in-progress dark version, just set your background:
 
 ```vim
 :set background=dark
 ```
-
-![bash-example-dark](screenshots/bash-example-dark.png)
 
 ## Differences
 
