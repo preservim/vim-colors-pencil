@@ -7,14 +7,14 @@
 ## Features
 
 iA Writer is an elegant word processor, marred only by its lack of Vim. It
-does have a nice colorscheme, however.
+does have a nice color scheme, however.
 
 * Accurate colors
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
 * Use for both code and prose, though it’s definitely geared towards the
   latter
 * Light and dark variants
-* iTerm color scheme available, for use in terminal-based Vim
+* iTerm color scheme [available][it] for using this color scheme with terminal-based Vim
 
 ## Requirements
 
@@ -25,20 +25,21 @@ Currently requires vim >= 7.0
 Install using Pathogen, Vundle, Neobundle, or your favorite Vim package
 manager.
 
-Or simply copy the colorscheme file to your `~/.vim/colors` directory.
+Or simply copy the color scheme file to your `~/.vim/colors` directory.
 
 ## Usage
 
-Just like any other colorscheme:
+Just like any other color scheme:
 
 ```vim
 :colorscheme pencil
 ```
 
-There is a work-in-progress dark version, just set your background:
+You can toggle between the light and dark variants:
 
 ```vim
 :set background=dark
+:set background=light
 ```
 
 ## Differences
@@ -65,10 +66,11 @@ Cousine is a good match for Nitti Light.
 
 ## See also
 
-* [iterm-colors-pencil][ip] - [@mattly][mt] has created an iTerm color scheme for pencil
+* [mattly/iterm-colors-pencil][it] - iTerm support for terminal-based use of the pencil color scheme
+* [pencil color scheme at vim.org][vo]
 
-[mt]: https://github.com/mattly
-[ip]: https://github.com/mattly/iterm-colors-pencil
+[it]: https://github.com/mattly/iterm-colors-pencil
+[vo]: http://www.vim.org/scripts/script.php?script_id=4850
 
 If you find this plugin useful, you may want to check out these others by
 [@reedes][re]:
