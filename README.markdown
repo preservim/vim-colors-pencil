@@ -29,6 +29,17 @@ manager.
 
 Or simply copy the color scheme file to your `~/.vim/colors` directory.
 
+## Configuration
+
+Those users who find the parentheses matching disconcerting can disable
+this default Vim plugin in their `.vimrc` with:
+
+```
+let loaded_matchparen = 1
+```
+
+See `:help pi_paren.txt` for more details. 
+
 ## Usage
 
 Just like any other color scheme:
