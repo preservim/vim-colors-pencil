@@ -11,7 +11,6 @@ does have a nice color scheme, however.
 
 The _pencil_ color scheme features: 
 
-* Accurate colors
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
 * Use for both code and prose, though it’s definitely geared towards the
   latter
@@ -30,6 +29,19 @@ manager.
 Or simply copy the color scheme file to your `~/.vim/colors` directory.
 
 ## Configuration
+
+### Contrast
+
+If you’re looking for greater contrast, set the following in your
+`.vimrc`:
+
+```
+let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
+```
+
+It currently only affects the blacks and grays.
+
+### Parentheses matching
 
 Those users who find the parentheses matching disconcerting can disable
 this default Vim plugin in their `.vimrc` with:
