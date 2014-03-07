@@ -289,9 +289,10 @@ call s:h("mkdID",                       {"fg": s:norm})
 call s:h("mkdIndentCode",               {"fg": s:norm})
 call s:h("mkdLineContinue",             {"fg": s:norm})
 call s:h("mkdLink",                     {"fg": s:norm})
-call s:h("mkdLinkDef",                  {"fg": s:medium_gray})
+call s:h("mkdLinkDef",                  {"fg": s:norm})
 call s:h("mkdListItem",                 {"fg": s:norm})
 call s:h("mkdNonListItemBlock",         {"fg": s:norm})
+call s:h("mkdRule",                     {"fg": s:norm})
 call s:h("mkdUrl",                      {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
 
 " XML content
