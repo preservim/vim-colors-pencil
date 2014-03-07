@@ -12,10 +12,13 @@ does have a nice color scheme, however.
 The _pencil_ color scheme features: 
 
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
-* Use for both code and prose, though it’s definitely geared towards the
-  latter
+* Use for both code and prose, though it’s definitely geared towards the latter
 * Light and dark variants
 * iTerm color scheme [available][it] for using this color scheme with terminal-based Vim
+* Support for [tpope/vim-markdown][tm] and [plasticboy/vim-markdown][pm]
+
+[tm]: http://github.com/tpope/vim-markdown
+[pm]: http://github.com/plasticboy/vim-markdown
 
 ## Requirements
 
@@ -40,6 +43,19 @@ let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
 ```
 
 It currently only affects the blacks and grays.
+
+### Headings color
+
+Most notably, the ‘#’ heading text is shaded dark blue by default. This
+compensates for the lack of a visual cue found in iA Writer where the
+heading indicators are inside the left margin. 
+
+If you’re looking for neutral heading colors, set the following in your
+`.vimrc`:
+
+```
+let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
+```
 
 ### Parentheses matching
 
@@ -67,12 +83,6 @@ You can toggle between the light and dark variants:
 :set background=light
 ```
 
-## Differences
-
-Most notably, the ‘#’ heading text is shaded blue. This compensates for
-the lack of a visual cue found in iA Writer where the heading indicators
-are inside the left margin. Here we use color instead.
-
 ## Font choices
 
 iA Writer uses a typeface called ‘Nitti Light’ by Blue Monday. ($)
@@ -99,8 +109,8 @@ Cousine is a good match for Nitti Light.
 [it]: https://github.com/mattly/iterm-colors-pencil
 [vo]: http://www.vim.org/scripts/script.php?script_id=4850
 
-If you find this plugin useful, you may want to check out these others by
-[@reedes][re]:
+If you find this colorscheme useful, you may want to check out these
+plugins by [@reedes][re]:
 
 * [vim-lexical][lx] - building on Vim’s spell-check and thesaurus/dictionary completion
 * [vim-litecorrect][lc] - lightweight auto-correction for Vim
@@ -108,7 +118,7 @@ If you find this plugin useful, you may want to check out these others by
 * [vim-pencil][pn] - rethinking Vim as a tool for writers
 * [vim-textobj-quote][qu] - extends Vim to support typographic (‘curly’) quotes
 * [vim-textobj-sentence][ts] - improving on Vim's native sentence motion command
-* [vim-thematic][th] — modify Vim’s appearance to suit your task and environment 
+* [vim-thematic][th] - modify Vim’s appearance to suit your task and environment 
 * [vim-wheel][wh] - screen-anchored cursor movement for Vim
 * [vim-wordy][wo] - uncovering usage problems in writing 
 

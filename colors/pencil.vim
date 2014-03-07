@@ -40,6 +40,10 @@ if ! exists("g:pencil_higher_contrast_ui")
   let g:pencil_higher_contrast_ui = 0
 endif
 
+if ! exists("g:pencil_neutral_headings")
+  let g:pencil_neutral_headings = 0
+endif
+
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
@@ -47,7 +51,9 @@ let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
 let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
-if g:pencil_higher_contrast_ui == 0
+
+if g:pencil_higher_contrast_ui == 1
+  " darker shadow and whiter grays
   let s:subtle_black  = { "gui": "#262626", "cterm": "235" }
   let s:light_gray    = { "gui": "#D9D9D9", "cterm": "253" }
   let s:lighter_gray  = { "gui": "#E5E6E6", "cterm": "254" }
@@ -100,6 +106,16 @@ else
   let s:green           = s:dark_green
   let s:red             = s:dark_red
   let s:visual          = s:light_blue
+endif
+
+if g:pencil_neutral_headings == 1
+  let s:head_a         = s:norm
+  let s:head_b         = s:norm
+  let s:head_c         = s:norm
+else
+  let s:head_a         = s:dark_blue
+  let s:head_b         = s:blue
+  let s:head_c         = s:dark_cyan
 endif
 
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
@@ -232,38 +248,51 @@ hi! link htmlTagN         Keyword
 call s:h("htmlItalic",    {"gui": "italic", "cterm": "bold"})
 call s:h("htmlBold",      {"gui": "bold", "cterm": "bold"})
 call s:h("htmlBoldItalic",{"gui": "bold,italic", "cterm": "bold"})
-call s:h("htmlH1",        {"fg": s:dark_blue})
-call s:h("htmlH2",        {"fg": s:dark_blue})
-call s:h("htmlH3",        {"fg": s:blue})
-call s:h("htmlH4",        {"fg": s:blue})
-call s:h("htmlH5",        {"fg": s:dark_cyan})
-call s:h("htmlH6",        {"fg": s:dark_cyan})
+call s:h("htmlH1",        {"fg": s:head_a, "gui": "bold,italic"})
+call s:h("htmlH2",        {"fg": s:head_a, "gui": "bold"})
+call s:h("htmlH3",        {"fg": s:head_b, "gui": "italic"})
+call s:h("htmlH4",        {"fg": s:head_b, "gui": "italic"})
+call s:h("htmlH5",        {"fg": s:head_c})
+call s:h("htmlH6",        {"fg": s:head_c})
 call s:h("htmlLink",      {"fg": s:blue, "gui": "underline", "cterm": "underline"})
 " hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 
-" Markdown content
-call s:h("markdownH1",                  {"fg": s:dark_blue, "gui": "bold,italic"})
-call s:h("markdownH2",                  {"fg": s:dark_blue, "gui": "bold"})
-call s:h("markdownH3",                  {"fg": s:dark_blue, "gui": "italic"})
-call s:h("markdownH4",                  {"fg": s:dark_blue, "gui": "italic"})
-call s:h("markdownH5",                  {"fg": s:dark_blue})
-call s:h("markdownH6",                  {"fg": s:dark_blue})
+" tpope/vim-markdown
+call s:h("markdownBlockquote",          {"fg": s:medium_gray})
 call s:h("markdownCodeDelimiter",       {"fg": s:norm})
+call s:h("markdownH1",                  {"fg": s:head_a, "gui": "bold,italic"})
+call s:h("markdownH2",                  {"fg": s:head_a, "gui": "bold"})
+call s:h("markdownH3",                  {"fg": s:head_a, "gui": "italic"})
+call s:h("markdownH4",                  {"fg": s:head_a, "gui": "italic"})
+call s:h("markdownH5",                  {"fg": s:head_a})
+call s:h("markdownH6",                  {"fg": s:head_a})
 call s:h("markdownHeadingDelimiter",    {"fg": s:norm})
 call s:h("markdownHeadingRule",         {"fg": s:norm})
-call s:h("markdownRule",                {"fg": s:norm})
 call s:h("markdownId",                  {"fg": s:norm})
 call s:h("markdownIdDeclaration",       {"fg": s:norm_subtle})
+call s:h("markdownLinkDelimiter",       {"fg": s:medium_gray})
 call s:h("markdownLinkText",            {"fg": s:norm})
 call s:h("markdownLinkTextDelimiter",   {"fg": s:medium_gray})
 call s:h("markdownListMarker",          {"fg": s:norm})
-call s:h("markdownLinkDelimiter",       {"fg": s:medium_gray})
+call s:h("markdownOrderedListMarker",   {"fg": s:norm})
+call s:h("markdownRule",                {"fg": s:norm})
 call s:h("markdownUrl",                 {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
 call s:h("markdownUrlDelimiter",        {"fg": s:medium_gray})
 call s:h("markdownUrlTitle",            {"fg": s:norm})
 call s:h("markdownUrlTitleDelimiter",   {"fg": s:medium_gray})
-call s:h("markdownOrderedListMarker",   {"fg": s:norm})
-call s:h("markdownBlockquote",          {"fg": s:medium_gray})
+
+" plasticboy/vim-markdown
+call s:h("mkdBlockQuote",               {"fg": s:norm})
+call s:h("mkdCode",                     {"fg": s:norm})
+call s:h("mkdDelimiter",                {"fg": s:medium_gray})
+call s:h("mkdID",                       {"fg": s:norm})
+call s:h("mkdIndentCode",               {"fg": s:norm})
+call s:h("mkdLineContinue",             {"fg": s:norm})
+call s:h("mkdLink",                     {"fg": s:norm})
+call s:h("mkdLinkDef",                  {"fg": s:medium_gray})
+call s:h("mkdListItem",                 {"fg": s:norm})
+call s:h("mkdNonListItemBlock",         {"fg": s:norm})
+call s:h("mkdUrl",                      {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
 
 " XML content
 hi! link xmlTag                     htmlTag
