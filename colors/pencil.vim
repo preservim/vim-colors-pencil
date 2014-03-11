@@ -2,6 +2,7 @@
 " Name:       pencil.vim
 " Version:    0.6
 " Maintainer: github.com/reedes github.com/mattly
+" License:    The MIT License (MIT)
 
 " Original iA Writer colors, to use as a guide
 " White           #F1F1F1
