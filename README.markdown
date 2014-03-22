@@ -6,19 +6,21 @@
 
 ## Features
 
-iA Writer is an elegant word processor, marred only by its lack of Vim. It
-does have a nice color scheme, however.
+The _pencil_ color scheme takes its inspiration from iA Writer, an elegant
+word processor available on the iOS and OSX platforms. 
 
-The _pencil_ color scheme features: 
+This Vim color scheme features:
 
 * Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
 * Use for both code and prose, though it’s definitely geared towards the latter
-* Light and dark variants
+* Light and dark background variants
 * iTerm color scheme [available][it] for using this color scheme with terminal-based Vim
 * Support for [tpope/vim-markdown][tm] and [plasticboy/vim-markdown][pm]
+* Support for the [bling/vim-airline][ba] status bar plugin
 
 [tm]: http://github.com/tpope/vim-markdown
 [pm]: http://github.com/plasticboy/vim-markdown
+[ba]: https://github.com/bling/vim-airline
 
 ## Requirements
 
@@ -26,10 +28,11 @@ Currently requires vim >= 7.0
 
 ## Installation
 
-Install using Pathogen, Vundle, Neobundle, or your favorite Vim package
-manager.
+For a basic install simply copy the color scheme file to your
+`~/.vim/colors` directory. 
 
-Or simply copy the color scheme file to your `~/.vim/colors` directory.
+For full support in which the airline theme is available, install using
+Pathogen, Vundle, Neobundle, or your favorite Vim package manager.
 
 ## Configuration
 
@@ -46,9 +49,9 @@ It currently only affects the blacks and grays.
 
 ### Headings color
 
-Most notably, the ‘#’ heading text is shaded dark blue by default. This
-compensates for the lack of a visual cue found in iA Writer where the
-heading indicators are inside the left margin. 
+When using a filetype of markdown, the ‘#’ heading text is shaded dark
+blue by default. This compensates for the lack of a visual cue found in iA
+Writer where the heading indicators are inside the left margin. 
 
 If you’re looking for neutral heading colors, set the following in your
 `.vimrc`:
@@ -57,16 +60,18 @@ If you’re looking for neutral heading colors, set the following in your
 let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
 ```
 
-### Parentheses matching
+### Airline Theme
 
-Those users who find the parentheses matching disconcerting can disable
-this default Vim plugin in their `.vimrc` with:
+![airline-example](screenshots/airline-example.png)
+
+A matching theme for the [Airline][al] status bar plugin is available.
+Enable by adding to your `.vimrc`:
 
 ```
-let loaded_matchparen = 1
+let g:airline_theme = 'pencil'
 ```
 
-See `:help pi_paren.txt` for more details. 
+[al]: https://github.com/bling/vim-airline
 
 ## Usage
 
@@ -82,6 +87,8 @@ You can toggle between the light and dark variants:
 :set background=dark
 :set background=light
 ```
+
+Like any other color scheme, you can add these commands to your `.vimrc`.
 
 ## Font choices
 
@@ -135,6 +142,14 @@ plugins by [@reedes][re]:
 
 The [README](https://github.com/reedes/vim-thematic) in
 _thematic_ has more details on setting up emulation of iA Writer.
+
+## Contributors
+
+Thanks to those who have helped improve the _pencil_ color scheme:
+
+* [@mattly](https://github.com/mattly)
+* [@tamagokun](https://github.com/tamagokun)
+* [@gorodinskiy](https://github.com/gorodinskiy)
 
 ## Future development
 
