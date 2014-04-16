@@ -100,6 +100,7 @@ Free alternatives with **bold** and _italic_ support include:
 * [Courier Prime](http://quoteunquoteapps.com/courierprime/) (serif)
 * [Cousine](http://www.google.com/fonts/specimen/Cousine)
 * [DejaVu Sans Mono](http://dejavu-fonts.org/wiki/Download)
+* [Fantasque Sans Mono](http://openfontlibrary.org/en/font/fantasque-sans-mono)
 * [Liberation](https://fedorahosted.org/liberation-fonts/)
 * [Luxi Mono Regular](http://www.fontsquirrel.com/fonts/Luxi-Mono) (serif)
 * [Ubuntu Mono](https://www.google.com/fonts/specimen/Ubuntu+Mono)
