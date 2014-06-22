@@ -53,12 +53,13 @@ let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 
-if g:pencil_higher_contrast_ui == 1
+if g:pencil_higher_contrast_ui == 0
   " darker shadow and whiter grays
   let s:subtle_black  = { "gui": "#262626", "cterm": "235" }
   let s:light_gray    = { "gui": "#D9D9D9", "cterm": "253" }
   let s:lighter_gray  = { "gui": "#E5E6E6", "cterm": "254" }
 else
+  " lighter shadows and darker grays
   let s:subtle_black  = { "gui": "#303030", "cterm": "236" }
   let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249" }
   let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251" }
