@@ -62,7 +62,7 @@ let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
 
 ### Airline Theme
 
-![airline-example](screenshots/airline-example.png)
+![airline-example](http://i.imgur.com/V39pwZq.png)
 
 A matching theme for the [Airline][al] status bar plugin is available.
 Enable by adding to your `.vimrc`:
