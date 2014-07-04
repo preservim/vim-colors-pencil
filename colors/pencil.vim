@@ -45,13 +45,20 @@ if ! exists("g:pencil_neutral_headings")
   let g:pencil_neutral_headings = 0
 endif
 
+if ! exists("g:pencil_focus")
+  let g:pencil_focus = 0
+endif
+
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
-let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
-let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
-let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
+"   s:subtle_black
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
+let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
+"   s:light_gray
+"   s:lighter_gray
+let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
+let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 
 if g:pencil_higher_contrast_ui == 0
   " darker shadow and whiter grays
@@ -88,21 +95,41 @@ let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
 if &background == "dark"
   let s:bg              = s:black
-  let s:bg_subtle       = s:light_black
   let s:bg_very_subtle  = s:subtle_black
-  let s:norm            = s:lighter_gray
-  let s:norm_subtle     = s:light_gray
+  let s:bg_subtle       = s:light_black
+
+  let s:norm_focus      = s:lighter_gray
+  if g:pencil_focus == 0
+    " defaults
+    let s:norm            = s:lighter_gray
+    let s:norm_subtle     = s:light_gray
+  else
+    " darken normal text (use with 'set cursorline')
+    let s:norm            = s:medium_gray
+    let s:norm_subtle     = s:lighter_black
+  endif
+
   let s:purple          = s:light_purple
   let s:cyan            = s:light_cyan
   let s:green           = s:light_green
   let s:red             = s:light_red
   let s:visual          = s:lighter_black
-else
+else " background == "light"
   let s:bg              = s:white
-  let s:bg_subtle       = s:light_gray
   let s:bg_very_subtle  = s:lighter_gray
-  let s:norm            = s:light_black
-  let s:norm_subtle     = s:lighter_black
+  let s:bg_subtle       = s:light_gray
+
+  let s:norm_focus      = s:light_black
+  if g:pencil_focus == 0
+    " defaults
+    let s:norm            = s:light_black
+    let s:norm_subtle     = s:lighter_black
+  else
+    " lighten normal text (use with 'set cursorline')
+    let s:norm            = s:medium_gray
+    let s:norm_subtle     = s:light_gray
+  endif
+
   let s:purple          = s:dark_purple
   let s:cyan            = s:dark_cyan
   let s:green           = s:dark_green
@@ -229,8 +256,16 @@ call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
-call s:h("CursorLine",    {"bg": s:bg_very_subtle})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
+
+if g:pencil_focus == 0
+  " as before, highlight cursor line with background change
+  call s:h("CursorLine", {"bg": s:bg_very_subtle })
+else
+  " increase contrast of the cursor line text
+  call s:h("CursorLine", {"fg": s:norm_focus })
+  set cursorline
+endif
 
 " remainder of syntax highlighting
 call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
