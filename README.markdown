@@ -7,7 +7,7 @@
 ## Features
 
 The _pencil_ color scheme takes its inspiration from iA Writer, an elegant
-word processor available on the iOS and OSX platforms. 
+word processor available on the iOS and OSX platforms.
 
 This Vim color scheme features:
 
@@ -15,12 +15,14 @@ This Vim color scheme features:
 * Use for both code and prose, though it’s definitely geared towards the latter
 * Light and dark background variants
 * iTerm color scheme [available][it] for using this color scheme with terminal-based Vim
-* Support for [tpope/vim-markdown][tm] and [plasticboy/vim-markdown][pm]
+* Support for [tpope/vim-markdown][tm], [plasticboy/vim-markdown][pm], and
+  [gabrielelana/vim-markdown][gm]
 * Support for the [bling/vim-airline][ba] status bar plugin
 
 [tm]: http://github.com/tpope/vim-markdown
 [pm]: http://github.com/plasticboy/vim-markdown
 [ba]: https://github.com/bling/vim-airline
+[gm]: https://github.com/gabrielelana/vim-markdown
 
 ## Requirements
 
@@ -29,7 +31,7 @@ Currently requires vim >= 7.0
 ## Installation
 
 For a basic install simply copy the color scheme file to your
-`~/.vim/colors` directory. 
+`~/.vim/colors` directory.
 
 For full support in which the airline theme is available, install using
 Pathogen, Vundle, Neobundle, or your favorite Vim package manager.
@@ -51,7 +53,7 @@ It currently only affects the blacks and grays.
 
 When using a filetype of markdown, the ‘#’ heading text is shaded dark
 blue by default. This compensates for the lack of a visual cue found in iA
-Writer where the heading indicators are inside the left margin. 
+Writer where the heading indicators are inside the left margin.
 
 If you’re looking for neutral heading colors, set the following in your
 `.vimrc`:
@@ -111,24 +113,24 @@ Cousine is a good match for Nitti Light.
 
 * [mattly/iterm-colors-pencil][it] - iTerm support for terminal-based use of the pencil color scheme
 * [mattly/atom-colors-pencil-light][ap] - Atom verson of the pencil color scheme
-* [pencil color scheme at vim.org][vo]
+* [pencil color scheme at vim.org][vg]
 
 [ap]: https://github.com/mattly/atom-colors-pencil-light
 [it]: https://github.com/mattly/iterm-colors-pencil
-[vo]: http://www.vim.org/scripts/script.php?script_id=4850
+[vg]: http://www.vim.org/scripts/script.php?script_id=4850
 
 If you find this colorscheme useful, you may want to check out these
 plugins by [@reedes][re]:
 
 * [vim-lexical][lx] - building on Vim’s spell-check and thesaurus/dictionary completion
 * [vim-litecorrect][lc] - lightweight auto-correction for Vim
-* [vim-one][vo] - make use of Vim’s _+clientserver_ capabilities 
+* [vim-one][vo] - make use of Vim’s _+clientserver_ capabilities
 * [vim-pencil][pn] - rethinking Vim as a tool for writers
 * [vim-textobj-quote][qu] - extends Vim to support typographic (‘curly’) quotes
 * [vim-textobj-sentence][ts] - improving on Vim's native sentence motion command
-* [vim-thematic][th] - modify Vim’s appearance to suit your task and environment 
+* [vim-thematic][th] - modify Vim’s appearance to suit your task and environment
 * [vim-wheel][wh] - screen-anchored cursor movement for Vim
-* [vim-wordy][wo] - uncovering usage problems in writing 
+* [vim-wordy][wo] - uncovering usage problems in writing
 
 [re]: https://github.com/reedes
 [lx]: http://github.com/reedes/vim-lexical
