@@ -62,6 +62,14 @@ If you’re looking for neutral heading colors, set the following in your
 let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
 ```
 
+### Markdown Code background
+
+If you’re looking for contrast in the code background in markdown:
+
+```
+let g:pencil_markdown_code_bg = 0   " 0=none (def), 1=subtle
+```
+
 ### Airline Theme
 
 ![airline-example](http://i.imgur.com/V39pwZq.png)
