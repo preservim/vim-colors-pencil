@@ -260,7 +260,7 @@ call s:h("htmlLink",      {"fg": s:blue, "gui": "underline", "cterm": "underline
 " hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 
 " tpope/vim-markdown
-call s:h("markdownBlockquote",          {"fg": s:medium_gray})
+call s:h("markdownBlockquote",          {"fg": s:norm})
 call s:h("markdownCodeDelimiter",       {"fg": s:norm})
 call s:h("markdownH1",                  {"fg": s:head_a, "gui": "bold,italic"})
 call s:h("markdownH2",                  {"fg": s:head_a, "gui": "bold"})
@@ -270,7 +270,7 @@ call s:h("markdownH5",                  {"fg": s:head_a})
 call s:h("markdownH6",                  {"fg": s:head_a})
 call s:h("markdownHeadingDelimiter",    {"fg": s:norm})
 call s:h("markdownHeadingRule",         {"fg": s:norm})
-call s:h("markdownId",                  {"fg": s:norm})
+call s:h("markdownId",                  {"fg": s:medium_gray})
 call s:h("markdownIdDeclaration",       {"fg": s:norm_subtle})
 call s:h("markdownLinkDelimiter",       {"fg": s:medium_gray})
 call s:h("markdownLinkText",            {"fg": s:norm})
@@ -287,15 +287,28 @@ call s:h("markdownUrlTitleDelimiter",   {"fg": s:medium_gray})
 call s:h("mkdBlockQuote",               {"fg": s:norm})
 call s:h("mkdCode",                     {"fg": s:norm})
 call s:h("mkdDelimiter",                {"fg": s:medium_gray})
-call s:h("mkdID",                       {"fg": s:norm})
+call s:h("mkdID",                       {"fg": s:medium_gray})
 call s:h("mkdIndentCode",               {"fg": s:norm})
 call s:h("mkdLineContinue",             {"fg": s:norm})
 call s:h("mkdLink",                     {"fg": s:norm})
-call s:h("mkdLinkDef",                  {"fg": s:norm})
+call s:h("mkdLinkDef",                  {"fg": s:medium_gray})
 call s:h("mkdListItem",                 {"fg": s:norm})
-call s:h("mkdNonListItemBlock",         {"fg": s:norm})
+call s:h("mkdNonListItemBlock",         {"fg": s:norm})  " bug in syntax?
 call s:h("mkdRule",                     {"fg": s:norm})
 call s:h("mkdUrl",                      {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
+
+" gabrielelana/vim-markdown
+call s:h("markdownBlockquote",          {"fg": s:norm})
+call s:h("markdownBlockquoteDelimiter", {"fg": s:norm})
+call s:h("markdownFencedCodeBlock",     {"fg": s:norm})
+call s:h("markdownInlineCode",          {"fg": s:norm})
+call s:h("markdownInlineDelimiter",     {"fg": s:norm})
+call s:h("markdownItemDelimiter",       {"fg": s:norm})
+call s:h("markdownLinkReference",       {"fg": s:medium_gray})
+call s:h("markdownLinkText",            {"fg": s:norm})
+call s:h("markdownLinkTextContainer",   {"fg": s:medium_gray})
+call s:h("markdownLinkUrl",             {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
+call s:h("markdownLinkUrlContainer",    {"fg": s:medium_gray})
 
 " XML content
 hi! link xmlTag                     htmlTag
