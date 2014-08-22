@@ -141,7 +141,7 @@ endfunction
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
-call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic"})
+call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
 call s:h("Constant",      {"fg": s:cyan})
 hi! link String           Constant
@@ -179,10 +179,10 @@ hi! link Delimiter        Special
 hi! link SpecialComment   Special
 hi! link Debug            Special
 
-call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
-call s:h("Ignore",        {"fg": s:bg})
-call s:h("Error",         {"fg": s:actual_white, "bg": s:red, "cterm": "bold"})
-call s:h("Todo",          {"fg": s:actual_white, "bg": s:pink, "gui": "bold", "cterm": "bold"})
+call s:h("Underlined",    {"fg": s:norm                      , "gui": "underline", "cterm": "underline"})
+call s:h("Ignore",        {"fg": s:bg                                                                  })
+call s:h("Error",         {"fg": s:actual_white, "bg": s:red , "gui": "bold"     , "cterm": "bold"     })
+call s:h("Todo",          {"fg": s:actual_white, "bg": s:pink, "gui": "bold"     , "cterm": "bold"     })
 
 " ui chrome ====================================================================
 " ordered according to `:help hitest.vim`
@@ -193,7 +193,7 @@ call s:h("Directory",     {"fg": s:dark_blue})
 call s:h("ErrorMsg",      {"fg": s:pink})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
 call s:h("Search",        {"bg": s:bg_subtle})
-call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
+call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
 call s:h("CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
@@ -252,33 +252,33 @@ hi! link htmlTagName      KeyWord
 hi! link htmlTagN         Keyword
 
 " HTML content
-call s:h("htmlItalic",    {"gui": "italic", "cterm": "bold"})
-call s:h("htmlBold",      {"gui": "bold", "cterm": "bold"})
-call s:h("htmlBoldItalic",{"gui": "bold,italic", "cterm": "bold"})
-call s:h("htmlH1",        {"fg": s:head_a, "gui": "bold,italic"})
-call s:h("htmlH2",        {"fg": s:head_a, "gui": "bold"})
-call s:h("htmlH3",        {"fg": s:head_b, "gui": "italic"})
-call s:h("htmlH4",        {"fg": s:head_b, "gui": "italic"})
-call s:h("htmlH5",        {"fg": s:head_c})
-call s:h("htmlH6",        {"fg": s:head_c})
-call s:h("htmlLink",      {"fg": s:blue, "gui": "underline", "cterm": "underline"})
+call s:h("htmlH1",        {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"     })
+call s:h("htmlH2",        {"fg": s:head_a, "gui": "bold"       , "cterm": "bold"     })
+call s:h("htmlH3",        {"fg": s:head_b, "gui": "italic"     , "cterm": "italic"   })
+call s:h("htmlH4",        {"fg": s:head_b, "gui": "italic"     , "cterm": "italic"   })
+call s:h("htmlH5",        {"fg": s:head_c                                            })
+call s:h("htmlH6",        {"fg": s:head_c                                            })
+call s:h("htmlLink",      {"fg": s:blue  , "gui": "underline"  , "cterm": "underline"})
+call s:h("htmlItalic",    {                "gui": "italic"     , "cterm": "italic"   })
+call s:h("htmlBold",      {                "gui": "bold"       , "cterm": "bold"     })
+call s:h("htmlBoldItalic",{                "gui": "bold,italic", "cterm": "bold"     })
 " hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 
 " tpope/vim-markdown
 call s:h("markdownBlockquote",          {"fg": s:norm})
-call s:h("markdownBold",                {"fg": s:norm, "gui": "bold"})
-call s:h("markdownBoldItalic",          {"fg": s:norm, "gui": "bold,italic"})
-call s:h("markdownH1",                  {"fg": s:head_a, "gui": "bold,italic"})
-call s:h("markdownH2",                  {"fg": s:head_a, "gui": "bold"})
-call s:h("markdownH3",                  {"fg": s:head_a, "gui": "italic"})
-call s:h("markdownH4",                  {"fg": s:head_a, "gui": "italic"})
+call s:h("markdownBold",                {"fg": s:norm  , "gui": "bold"       , "cterm": "bold"  })
+call s:h("markdownBoldItalic",          {"fg": s:norm  , "gui": "bold,italic", "cterm": "bold"  })
+call s:h("markdownH1",                  {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"  })
+call s:h("markdownH2",                  {"fg": s:head_a, "gui": "bold"       , "cterm": "bold"  })
+call s:h("markdownH3",                  {"fg": s:head_a, "gui": "italic"     , "cterm": "italic"})
+call s:h("markdownH4",                  {"fg": s:head_a, "gui": "italic"     , "cterm": "italic"})
 call s:h("markdownH5",                  {"fg": s:head_a})
 call s:h("markdownH6",                  {"fg": s:head_a})
 call s:h("markdownHeadingDelimiter",    {"fg": s:norm})
 call s:h("markdownHeadingRule",         {"fg": s:norm})
 call s:h("markdownId",                  {"fg": s:medium_gray})
 call s:h("markdownIdDeclaration",       {"fg": s:norm_subtle})
-call s:h("markdownItalic",              {"fg": s:norm, "gui": "italic"})
+call s:h("markdownItalic",              {"fg": s:norm  , "gui": "italic"     , "cterm": "italic"})
 call s:h("markdownLinkDelimiter",       {"fg": s:medium_gray})
 call s:h("markdownLinkText",            {"fg": s:norm})
 call s:h("markdownLinkTextDelimiter",   {"fg": s:medium_gray})
