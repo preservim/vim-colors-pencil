@@ -18,6 +18,9 @@ This Vim color scheme features:
 * Support for [tpope/vim-markdown][tm], [plasticboy/vim-markdown][pm], and
   [gabrielelana/vim-markdown][gm]
 * Support for the [bling/vim-airline][ba] status bar plugin
+* Support for Vim’s Conceal feature to hide `_` and `*` characters when
+  displaying \_*italic*\_, \*\*__bold__\*\* and \*\*\*___bold
+  italic___\*\*\* styled text in Markdown
 
 [tm]: http://github.com/tpope/vim-markdown
 [pm]: http://github.com/plasticboy/vim-markdown
