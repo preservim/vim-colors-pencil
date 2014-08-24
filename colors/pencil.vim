@@ -188,7 +188,7 @@ call s:h("Todo",          {"fg": s:actual_white, "bg": s:pink, "gui": "bold"    
 " ordered according to `:help hitest.vim`
 
 call s:h("SpecialKey",    {"fg": s:light_green})
-call s:h("NonText",       {"fg": s:medium_gray})
+call s:h("NonText",       {"fg": s:bg_subtle})
 call s:h("Directory",     {"fg": s:dark_blue})
 call s:h("ErrorMsg",      {"fg": s:pink})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
