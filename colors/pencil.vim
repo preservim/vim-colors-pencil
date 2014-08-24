@@ -268,6 +268,7 @@ call s:h("htmlBoldItalic",{                "gui": "bold,italic", "cterm": "bold"
 call s:h("markdownBlockquote",          {"fg": s:norm})
 call s:h("markdownBold",                {"fg": s:norm  , "gui": "bold"       , "cterm": "bold"  })
 call s:h("markdownBoldItalic",          {"fg": s:norm  , "gui": "bold,italic", "cterm": "bold"  })
+call s:h("markdownEscape",              {"fg": s:norm})
 call s:h("markdownH1",                  {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"  })
 call s:h("markdownH2",                  {"fg": s:head_a, "gui": "bold"       , "cterm": "bold"  })
 call s:h("markdownH3",                  {"fg": s:head_a, "gui": "italic"     , "cterm": "italic"})
