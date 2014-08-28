@@ -140,13 +140,13 @@ Cousine is a good match for Nitti Light.
 
 ## See also
 
-* [mattly/iterm-colors-pencil][it] - iTerm support for terminal-based use of the pencil color scheme
+* [mattly/iterm-colors-pencil][it] - terminal support for mutt, tmux and iTerm
+* [gummesson/term-colors-pencil][tcp] - terminal support for urxvt and termite
 * [mattly/atom-colors-pencil-light][ap] - Atom verson of the pencil color scheme
-* [pencil color scheme at vim.org][vg]
 
-[ap]: https://github.com/mattly/atom-colors-pencil-light
 [it]: https://github.com/mattly/iterm-colors-pencil
-[vg]: http://www.vim.org/scripts/script.php?script_id=4850
+[tcp]: https://github.com/gummesson/term-colors-pencil
+[ap]: https://github.com/mattly/atom-colors-pencil-light
 
 If you find this colorscheme useful, you may want to check out these
 plugins by [@reedes][re]:
