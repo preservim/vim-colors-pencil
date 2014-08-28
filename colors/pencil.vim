@@ -334,6 +334,21 @@ else
   call s:h("markdownInlineCode",          {"fg": s:norm})
 en
 
+" mattly/vim-markdown-enhancements
+call s:h("mmdFootnoteDelimiter",        {"fg": s:medium_gray})
+call s:h("mmdFootnoteMarker",           {"fg": s:norm})
+call s:h("mmdTableAlign",               {"fg": s:norm})
+call s:h("mmdTableDelimiter",           {"fg": s:norm})
+call s:h("mmdTableHeadDelimiter",       {"fg": s:norm})
+call s:h("mmdTableHeader",              {"fg": s:norm})
+call s:h("mmdTableCaptionDelimiter",    {"fg": s:norm})
+call s:h("mmdTableCaption",             {"fg": s:norm})
+
+" Textile content
+" https://github.com/timcharper/textile.vim/blob/master/syntax/textile.vim
+"call s:h("txtBold",                {"fg": s:norm  , "gui": "bold"       , "cterm": "bold"  })
+"call s:h("txtEmphasis",            {"fg": s:norm  , "gui": "italic"     , "cterm": "italic"})
+
 " XML content
 hi! link xmlTag                     htmlTag
 hi! link xmlEndTag                  xmlTag
