@@ -45,10 +45,6 @@ if ! exists("g:pencil_neutral_headings")
   let g:pencil_neutral_headings = 0
 endif
 
-if ! exists("g:pencil_markdown_code_bg")
-  let g:pencil_markdown_code_bg = 0
-endif
-
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
@@ -290,13 +286,8 @@ call s:h("markdownUrl",                 {"fg": s:medium_gray, "gui": "underline"
 call s:h("markdownUrlDelimiter",        {"fg": s:medium_gray})
 call s:h("markdownUrlTitle",            {"fg": s:norm})
 call s:h("markdownUrlTitleDelimiter",   {"fg": s:medium_gray})
-if g:pencil_markdown_code_bg == 1
-  call s:h("markdownCode",                {"fg": s:norm, "bg": s:bg_very_subtle})
-  call s:h("markdownCodeDelimiter",       {"fg": s:norm, "bg": s:bg_very_subtle})
-else
-  call s:h("markdownCode",                {"fg": s:norm})
-  call s:h("markdownCodeDelimiter",       {"fg": s:norm})
-en
+call s:h("markdownCode",                {"fg": s:norm})
+call s:h("markdownCodeDelimiter",       {"fg": s:norm})
 
 " plasticboy/vim-markdown
 call s:h("mkdBlockQuote",               {"fg": s:norm})
@@ -309,13 +300,8 @@ call s:h("mkdListItem",                 {"fg": s:norm})
 call s:h("mkdNonListItemBlock",         {"fg": s:norm})  " bug in syntax?
 call s:h("mkdRule",                     {"fg": s:norm})
 call s:h("mkdUrl",                      {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
-if g:pencil_markdown_code_bg == 1
-  call s:h("mkdCode",                     {"fg": s:norm, "bg": s:bg_very_subtle})
-  call s:h("mkdIndentCode",               {"fg": s:norm, "bg": s:bg_very_subtle})
-else
-  call s:h("mkdCode",                     {"fg": s:norm})
-  call s:h("mkdIndentCode",               {"fg": s:norm})
-en
+call s:h("mkdCode",                     {"fg": s:norm})
+call s:h("mkdIndentCode",               {"fg": s:norm})
 
 " gabrielelana/vim-markdown
 call s:h("markdownBlockquoteDelimiter", {"fg": s:norm})
@@ -326,13 +312,8 @@ call s:h("markdownLinkText",            {"fg": s:norm})
 call s:h("markdownLinkTextContainer",   {"fg": s:medium_gray})
 call s:h("markdownLinkUrl",             {"fg": s:medium_gray, "gui": "underline", "cterm": "underline"})
 call s:h("markdownLinkUrlContainer",    {"fg": s:medium_gray})
-if g:pencil_markdown_code_bg == 1
-  call s:h("markdownFencedCodeBlock",     {"fg": s:norm, "bg": s:bg_very_subtle})
-  call s:h("markdownInlineCode",          {"fg": s:norm, "bg": s:bg_very_subtle})
-else
-  call s:h("markdownFencedCodeBlock",     {"fg": s:norm})
-  call s:h("markdownInlineCode",          {"fg": s:norm})
-en
+call s:h("markdownFencedCodeBlock",     {"fg": s:norm})
+call s:h("markdownInlineCode",          {"fg": s:norm})
 
 " mattly/vim-markdown-enhancements
 call s:h("mmdFootnoteDelimiter",        {"fg": s:medium_gray})
