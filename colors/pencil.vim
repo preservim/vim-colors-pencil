@@ -153,16 +153,8 @@ endfunction
 " common groups ================================================================
 " (see `:h w18`)
 
-if g:colors_focus
-  " this is the focused line
-  call s:h(0, "CursorLine",    {"fg": s:norm, "bg": s:bg})
-else
-  " the normal cursor line
-  call s:h(1, "CursorLine",    {"bg": s:bg_very_subtle})
-en
-
 call s:h(1, "Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h(1, "Cursor",        {"bg": s:blue, "fg": s:norm })
+call s:h(0, "Cursor",        {"bg": s:blue, "fg": s:norm })
 call s:h(1, "Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
 call s:h(1, "Constant",      {"fg": s:cyan})
@@ -218,15 +210,15 @@ call s:h(1, "Search",        {"bg": s:bg_subtle})
 call s:h(1, "MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h(1, "LineNr",        {"fg": s:bg_subtle})
-call s:h(1, "CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
+call s:h(0, "CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
 call s:h(1, "Question",      {"fg": s:red})
 call s:h(1, "StatusLine",    {"bg": s:bg_very_subtle})
 hi! link Conceal Normal
 call s:h(1, "StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
 call s:h(1, "VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
 call s:h(1, "Title",         {"fg": s:dark_blue})
-call s:h(1, "Visual",        {"bg": s:visual})
-call s:h(1, "VisualNOS",     {"bg": s:bg_subtle})
+call s:h(0, "Visual",        {"bg": s:visual})
+call s:h(0, "VisualNOS",     {"bg": s:bg_subtle})
 call s:h(1, "WarningMsg",    {"fg": s:red})
 call s:h(1, "WildMenu",      {"fg": s:bg, "bg": s:norm})
 call s:h(1, "Folded",        {"fg": s:medium_gray})
@@ -257,6 +249,14 @@ call s:h(1, "TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "c
 call s:h(1, "TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h(1, "CursorColumn",  {"bg": s:bg_very_subtle})
 call s:h(1, "ColorColumn",   {"bg": s:bg_subtle})
+
+if g:colors_focus
+  " this is the focused line
+  call s:h(0, "CursorLine",    {"fg": s:norm, "bg": s:bg})
+else
+  " the normal cursor line
+  call s:h(1, "CursorLine",    {"bg": s:bg_very_subtle})
+en
 
 " remainder of syntax highlighting
 call s:h(1, "MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
