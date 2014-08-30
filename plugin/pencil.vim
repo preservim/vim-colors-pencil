@@ -22,11 +22,12 @@ noremap <SID>TogFocus  :call <SID>TogFocus()<CR>
 fun! s:TogFocus()
   if !exists('g:colors_focus') || g:colors_focus == 0
     set cursorline
-    set laststatus=0
-    set noruler
+    "set laststatus=0
+    "set noruler
     "set scrolloff=999
     let g:colors_focus = 1
   else
+    " TODO preserve original cursorline setting
     set nocursorline
     let g:colors_focus = 0
   en

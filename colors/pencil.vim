@@ -205,9 +205,9 @@ call s:h(1, "SpecialKey",    {"fg": s:light_green})
 call s:h(1, "NonText",       {"fg": s:medium_gray})
 call s:h(1, "Directory",     {"fg": s:dark_blue})
 call s:h(1, "ErrorMsg",      {"fg": s:pink})
-call s:h(1, "IncSearch",     {"bg": s:yellow, "fg": s:light_black})
-call s:h(1, "Search",        {"bg": s:bg_subtle})
-call s:h(1, "MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
+call s:h(0, "IncSearch",     {"bg": s:yellow, "fg": s:light_black})
+call s:h(0, "Search",        {"bg": s:bg_subtle, "fg": s:norm})
+call s:h(0, "MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h(1, "LineNr",        {"fg": s:medium_gray})
 call s:h(0, "CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
@@ -217,8 +217,8 @@ hi! link Conceal Normal
 call s:h(1, "StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
 call s:h(1, "VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
 call s:h(1, "Title",         {"fg": s:dark_blue})
-call s:h(0, "Visual",        {"bg": s:visual})
-call s:h(0, "VisualNOS",     {"bg": s:bg_subtle})
+call s:h(0, "Visual",        {"bg": s:visual, "fg": s:norm})
+call s:h(1, "VisualNOS",     {"bg": s:bg_subtle})
 call s:h(1, "WarningMsg",    {"fg": s:red})
 call s:h(1, "WildMenu",      {"fg": s:bg, "bg": s:norm})
 call s:h(1, "Folded",        {"fg": s:medium_gray})
@@ -240,8 +240,8 @@ else
   call s:h(1, "SpellRare",   {"cterm": "underline", "fg": s:pink})
   call s:h(1, "SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
 endif
-call s:h(1, "Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
-call s:h(1, "PmenuSel",      {"fg": s:norm, "bg": s:blue})
+call s:h(0, "Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
+call s:h(0, "PmenuSel",      {"fg": s:norm, "bg": s:blue})
 hi! link PmenuSbar        Pmenu
 hi! link PmenuThumb       Pmenu
 call s:h(1, "TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
@@ -259,7 +259,7 @@ else
 en
 
 " remainder of syntax highlighting
-call s:h(1, "MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
+call s:h(0, "MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
 call s:h(1, "qfLineNr",      {"fg": s:medium_gray})
 
 " hi helpHyperTextJump guifg=#5FAFD7 ctermfg=74
