@@ -24,7 +24,7 @@ fun! s:TogFocus()
     set cursorline
     set laststatus=0
     set noruler
-    set scrolloff=999
+    "set scrolloff=999
     let g:colors_focus = 1
   else
     set nocursorline
