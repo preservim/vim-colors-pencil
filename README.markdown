@@ -64,6 +64,16 @@ If you’re looking for neutral heading colors, set the following in your
 let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
 ```
 
+### Terminal Italics
+
+If you're using Vim in the terminal and your terminal supports italics, you 
+can opt-in to italic support for some syntax highlighting, such as comments,
+by setting the following in your `.vimrc`:
+
+```
+let g:pencil_terminal_italics = 1
+```
+
 ### Airline Theme
 
 ![airline-example](http://i.imgur.com/V39pwZq.png)

@@ -45,6 +45,11 @@ if ! exists("g:pencil_neutral_headings")
   let g:pencil_neutral_headings = 0
 endif
 
+" not all terminals support italics properly.  If yours does, opt-in.
+if ! exists("g:pencil_terminal_italics")
+  let g:pencil_terminal_italics = 0
+endif
+
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
@@ -122,6 +127,10 @@ endif
 
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
+  " Not all terminals support italics properly. If yours does, opt-in.
+  if g:pencil_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
+    unlet a:style.cterm
+  endif
   execute "highlight" a:group
     \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
     \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
