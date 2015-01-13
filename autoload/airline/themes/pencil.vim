@@ -78,9 +78,9 @@ function! airline#themes#pencil#refresh()
   " Inactive, according to VertSplit in pencil
   " (bg dark: base00; bg light: base0)
   if s:background == 'dark'
-    let s:IA = [s:base02, s:base00, '']
+    let s:IA = [s:base01, s:base02, '']
   else
-    let s:IA = [s:base2, s:base0, '']
+    let s:IA = [s:base1, s:base2, '']
   endif
 
   """"""""""""""""""""""""""""""""""""""""""""""""
