@@ -64,9 +64,24 @@ If you’re looking for neutral heading colors, set the following in your
 let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
 ```
 
+### Code background color
+
+Similar to the rendered markdown found on GitHub, `inline` and `fenced`
+code blocks will have a subtle gray background.
+
+If you’re looking for neutral code background, set the following in
+your `.vimrc`:
+
+```
+let g:pencil_neutral_code_bg = 1   " 0=gray (def), 1=normal
+```
+
+See `g:pencil_higher_contrast_ui` above for adjusting the code background
+contrast.
+
 ### Terminal Italics
 
-If you're using Vim in the terminal and your terminal supports italics, you 
+If you're using Vim in the terminal and your terminal supports italics, you
 can opt-in to italic support for some syntax highlighting, such as comments,
 by setting the following in your `.vimrc`:
 
