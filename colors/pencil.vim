@@ -54,6 +54,10 @@ if ! exists("g:pencil_terminal_italics")
   let g:pencil_terminal_italics = 0
 endif
 
+if ! exists("g:pencil_spell_undercurl")
+    let g:pencil_spell_undercurl = 0
+endif
+
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
@@ -230,16 +234,30 @@ call s:h("DiffChange",    {"fg": s:dark_yellow})
 call s:h("DiffText",      {"fg": s:dark_blue})
 call s:h("SignColumn",    {"fg": s:light_green})
 
-if has("gui_running")
-  call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
-  call s:h("SpellCap",    {"gui": "underline", "sp": s:light_green})
-  call s:h("SpellRare",   {"gui": "underline", "sp": s:pink})
-  call s:h("SpellLocal",  {"gui": "underline", "sp": s:dark_green})
+if g:pencil_spell_undercurl == 1
+  if has("gui_running")
+    call s:h("SpellBad",    {"gui": "undercurl", "sp": s:red})
+    call s:h("SpellCap",    {"gui": "undercurl", "sp": s:light_green})
+    call s:h("SpellRare",   {"gui": "undercurl", "sp": s:pink})
+    call s:h("SpellLocal",  {"gui": "undercurl", "sp": s:dark_green})
+  else
+    call s:h("SpellBad",    {"cterm": "undercurl", "fg": s:red})
+    call s:h("SpellCap",    {"cterm": "undercurl", "fg": s:light_green})
+    call s:h("SpellRare",   {"cterm": "undercurl", "fg": s:pink})
+    call s:h("SpellLocal",  {"cterm": "undercurl", "fg": s:dark_green})
+  endif
 else
-  call s:h("SpellBad",    {"cterm": "underline", "fg": s:red})
-  call s:h("SpellCap",    {"cterm": "underline", "fg": s:light_green})
-  call s:h("SpellRare",   {"cterm": "underline", "fg": s:pink})
-  call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
+  if has("gui_running")
+    call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
+    call s:h("SpellCap",    {"gui": "underline", "sp": s:light_green})
+    call s:h("SpellRare",   {"gui": "underline", "sp": s:pink})
+    call s:h("SpellLocal",  {"gui": "underline", "sp": s:dark_green})
+  else
+    call s:h("SpellBad",    {"cterm": "underline", "fg": s:red})
+    call s:h("SpellCap",    {"cterm": "underline", "fg": s:light_green})
+    call s:h("SpellRare",   {"cterm": "underline", "fg": s:pink})
+    call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
+  endif
 endif
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
