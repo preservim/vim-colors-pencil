@@ -57,8 +57,7 @@ When using a filetype of markdown, the ‘#’ heading text is shaded dark
 blue by default. This compensates for the lack of a visual cue found in iA
 Writer where the heading indicators are inside the left margin.
 
-If you’re looking for neutral heading colors, set the following in your
-`.vimrc`:
+If you’re looking for neutral heading colors:
 
 ```
 let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
@@ -69,8 +68,7 @@ let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
 Similar to the rendered markdown found on GitHub, `inline` and `fenced`
 code blocks will have a subtle gray background.
 
-If you’re looking for neutral code background, set the following in
-your `.vimrc`:
+If you’re looking for neutral code background:
 
 ```
 let g:pencil_neutral_code_bg = 1   " 0=gray (def), 1=normal
@@ -78,6 +76,17 @@ let g:pencil_neutral_code_bg = 1   " 0=gray (def), 1=normal
 
 See `g:pencil_higher_contrast_ui` above for adjusting the code background
 contrast.
+
+### Curled Underline for Spelling Highlights
+
+GUI users may prefer `undercurl` to the default `underline` in
+highlighting misspelled words.
+
+```
+let g:pencil_gui_spell_undercurl = 1     " 0=underline (def), 1=undercurl
+```
+
+Non-spell underlines remain non-curled.
 
 ### Terminal Italics
 

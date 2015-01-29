@@ -54,6 +54,11 @@ if ! exists("g:pencil_terminal_italics")
   let g:pencil_terminal_italics = 0
 endif
 
+if ! exists("g:pencil_gui_spell_undercurl")
+  let g:pencil_gui_spell_undercurl = 0
+endif
+
+
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
@@ -133,6 +138,12 @@ if g:pencil_neutral_code_bg == 1
   let s:code_bg        = s:bg
 else
   let s:code_bg        = s:bg_very_subtle
+endif
+
+if g:pencil_gui_spell_undercurl == 1
+  let s:gui_sp_un      = 'undercurl'
+else
+  let s:gui_sp_un      = 'underline'
 endif
 
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
@@ -231,10 +242,10 @@ call s:h("DiffText",      {"fg": s:dark_blue})
 call s:h("SignColumn",    {"fg": s:light_green})
 
 if has("gui_running")
-  call s:h("SpellBad",    {"gui": "underline", "sp": s:red})
-  call s:h("SpellCap",    {"gui": "underline", "sp": s:light_green})
-  call s:h("SpellRare",   {"gui": "underline", "sp": s:pink})
-  call s:h("SpellLocal",  {"gui": "underline", "sp": s:dark_green})
+  call s:h("SpellBad",    {"gui": s:gui_sp_un, "sp": s:red})
+  call s:h("SpellCap",    {"gui": s:gui_sp_un, "sp": s:light_green})
+  call s:h("SpellRare",   {"gui": s:gui_sp_un, "sp": s:pink})
+  call s:h("SpellLocal",  {"gui": s:gui_sp_un, "sp": s:dark_green})
 else
   call s:h("SpellBad",    {"cterm": "underline", "fg": s:red})
   call s:h("SpellCap",    {"cterm": "underline", "fg": s:light_green})
