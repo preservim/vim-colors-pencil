@@ -79,11 +79,11 @@ contrast.
 
 ### Curled Underline for Spelling Highlights
 
-GUI users may prefer `undercurl` to the default `underline` in
-highlighting misspelled words.
+You can choose between `undercurl` and `underline` in highlighting
+misspelled words.
 
 ```
-let g:pencil_gui_spell_undercurl = 1     " 0=underline (def), 1=undercurl
+let g:pencil_spell_undercurl = 1       " 0=underline, 1=undercurl (def)
 ```
 
 Non-spell underlines remain non-curled.
@@ -168,7 +168,7 @@ Cousine is a good match for Nitti Light.
 
 * [mattly/iterm-colors-pencil][it] - terminal support for mutt, tmux and iTerm
 * [gummesson/term-colors-pencil][tcp] - terminal support for urxvt and termite
-* [mattly/atom-colors-pencil-light][ap] - Atom verson of the pencil color scheme
+* [mattly/atom-colors-pencil-light][ap] - Atom version of the pencil color scheme
 
 [it]: https://github.com/mattly/iterm-colors-pencil
 [tcp]: https://github.com/gummesson/term-colors-pencil

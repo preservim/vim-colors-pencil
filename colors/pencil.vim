@@ -54,10 +54,9 @@ if ! exists("g:pencil_terminal_italics")
   let g:pencil_terminal_italics = 0
 endif
 
-if ! exists("g:pencil_gui_spell_undercurl")
-  let g:pencil_gui_spell_undercurl = 0
+if ! exists("g:pencil_spell_undercurl")
+  let g:pencil_spell_undercurl = 1
 endif
-
 
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
@@ -140,10 +139,10 @@ else
   let s:code_bg        = s:bg_very_subtle
 endif
 
-if g:pencil_gui_spell_undercurl == 1
-  let s:gui_sp_un      = 'undercurl'
+if g:pencil_spell_undercurl == 1
+  let s:sp_un      = 'undercurl'
 else
-  let s:gui_sp_un      = 'underline'
+  let s:sp_un      = 'underline'
 endif
 
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
@@ -242,15 +241,15 @@ call s:h("DiffText",      {"fg": s:dark_blue})
 call s:h("SignColumn",    {"fg": s:light_green})
 
 if has("gui_running")
-  call s:h("SpellBad",    {"gui": s:gui_sp_un, "sp": s:red})
-  call s:h("SpellCap",    {"gui": s:gui_sp_un, "sp": s:light_green})
-  call s:h("SpellRare",   {"gui": s:gui_sp_un, "sp": s:pink})
-  call s:h("SpellLocal",  {"gui": s:gui_sp_un, "sp": s:dark_green})
+  call s:h("SpellBad",    {"gui": s:sp_un, "sp": s:red})
+  call s:h("SpellCap",    {"gui": s:sp_un, "sp": s:light_green})
+  call s:h("SpellRare",   {"gui": s:sp_un, "sp": s:pink})
+  call s:h("SpellLocal",  {"gui": s:sp_un, "sp": s:dark_green})
 else
-  call s:h("SpellBad",    {"cterm": "underline", "fg": s:red})
-  call s:h("SpellCap",    {"cterm": "underline", "fg": s:light_green})
-  call s:h("SpellRare",   {"cterm": "underline", "fg": s:pink})
-  call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
+  call s:h("SpellBad",    {"cterm": s:sp_un, "fg": s:red})
+  call s:h("SpellCap",    {"cterm": s:sp_un, "fg": s:light_green})
+  call s:h("SpellRare",   {"cterm": s:sp_un, "fg": s:pink})
+  call s:h("SpellLocal",  {"cterm": s:sp_un, "fg": s:dark_green})
 endif
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
