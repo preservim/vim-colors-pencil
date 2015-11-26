@@ -11,7 +11,7 @@ word processor available on the iOS and OSX platforms.
 
 This Vim color scheme features:
 
-* Subtle indicators of changes in the gutter for Signify, git-gutter, etc.
+* Subtle indicators of changes in the gutter for [Signify][sig], [gitgutter][gg], etc.
 * Use for both code and prose, though it’s definitely geared towards the latter
 * Light and dark background variants
 * iTerm color scheme [available][it] for using this color scheme with terminal-based Vim
@@ -42,7 +42,7 @@ Pathogen, Vundle, Neobundle, or your favorite Vim package manager.
 
 ### Contrast
 
-If you’re looking for greater contrast, set the following in your
+If you’re looking for greater contrast, set the following global in your
 `.vimrc`:
 
 ```
@@ -77,6 +77,19 @@ let g:pencil_neutral_code_bg = 1   " 0=gray (def), 1=normal
 See `g:pencil_higher_contrast_ui` above for adjusting the code background
 contrast.
 
+### Gutter Color (new)
+
+For users of [Signify][sig] or [gitgutter][gg], indicators will be subtle
+monochrome by default. If you prefer colored indicators, set the following
+global:
+
+```
+let g:pencil_gutter_color = 1      " 0=mono (def), 1=color
+```
+
+[sig]: https://github.com/mhinz/vim-signify
+[gg]: https://github.com/airblade/vim-gitgutter
+
 ### Curled Underline for Spelling Highlights
 
 You can choose between `undercurl` and `underline` in highlighting
@@ -91,8 +104,8 @@ Non-spell underlines remain non-curled.
 ### Terminal Italics
 
 If you're using Vim in the terminal and your terminal supports italics, you
-can opt-in to italic support for some syntax highlighting, such as comments,
-by setting the following in your `.vimrc`:
+can opt-in to italic support for some syntax highlighting, such as
+comments, by setting the following global:
 
 ```
 let g:pencil_terminal_italics = 1

@@ -58,6 +58,10 @@ if ! exists("g:pencil_spell_undercurl")
   let g:pencil_spell_undercurl = 1
 endif
 
+if ! exists("g:pencil_gutter_color")
+  let g:pencil_gutter_color = 0
+endif
+
 " Colors
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
@@ -365,10 +369,20 @@ hi! link xmlEndTag                  xmlTag
 hi! link xmlTagName                 htmlTagName
 
 " Signify, git-gutter
-hi link SignifySignAdd              LineNr
-hi link SignifySignDelete           LineNr
-hi link SignifySignChange           LineNr
-hi link GitGutterAdd                LineNr
-hi link GitGutterDelete             LineNr
-hi link GitGutterChange             LineNr
-hi link GitGutterChangeDelete       LineNr
+if g:pencil_gutter_color == 1
+  hi link SignifySignAdd              DiffAdd
+  hi link SignifySignDelete           DiffDelete
+  hi link SignifySignChange           DiffChange
+  hi link GitGutterAdd                DiffAdd
+  hi link GitGutterDelete             DiffDelete
+  hi link GitGutterChange             DiffChange
+  hi link GitGutterChangeDelete       DiffChange
+else
+  hi link SignifySignAdd              LineNr
+  hi link SignifySignDelete           LineNr
+  hi link SignifySignChange           LineNr
+  hi link GitGutterAdd                LineNr
+  hi link GitGutterDelete             LineNr
+  hi link GitGutterChange             LineNr
+  hi link GitGutterChangeDelete       LineNr
+endif
