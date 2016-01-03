@@ -45,7 +45,7 @@ Pathogen, Vundle, Neobundle, or your favorite Vim package manager.
 If you’re looking for greater contrast, set the following global in your
 `.vimrc`:
 
-```
+```vim
 let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high
 ```
 
@@ -59,7 +59,7 @@ Writer where the heading indicators are inside the left margin.
 
 If you’re looking for neutral heading colors:
 
-```
+```vim
 let g:pencil_neutral_headings = 1   " 0=blue (def), 1=normal
 ```
 
@@ -70,20 +70,20 @@ code blocks will have a subtle gray background.
 
 If you’re looking for neutral code background:
 
-```
+```vim
 let g:pencil_neutral_code_bg = 1   " 0=gray (def), 1=normal
 ```
 
 See `g:pencil_higher_contrast_ui` above for adjusting the code background
 contrast.
 
-### Gutter Color (new)
+### Gutter Color
 
 For users of [Signify][sig] or [gitgutter][gg], indicators will be subtle
 monochrome by default. If you prefer colored indicators, set the following
 global:
 
-```
+```vim
 let g:pencil_gutter_color = 1      " 0=mono (def), 1=color
 ```
 
@@ -95,7 +95,7 @@ let g:pencil_gutter_color = 1      " 0=mono (def), 1=color
 You can choose between `undercurl` and `underline` in highlighting
 misspelled words.
 
-```
+```vim
 let g:pencil_spell_undercurl = 1       " 0=underline, 1=undercurl (def)
 ```
 
@@ -107,7 +107,7 @@ If you're using Vim in the terminal and your terminal supports italics, you
 can opt-in to italic support for some syntax highlighting, such as
 comments, by setting the following global:
 
-```
+```vim
 let g:pencil_terminal_italics = 1
 ```
 
@@ -118,7 +118,7 @@ let g:pencil_terminal_italics = 1
 A matching theme for the [Airline][al] status bar plugin is available.
 Enable by adding to your `.vimrc`:
 
-```
+```vim
 let g:airline_theme = 'pencil'
 ```
 
@@ -182,10 +182,12 @@ Cousine is a good match for Nitti Light.
 * [mattly/iterm-colors-pencil][it] - terminal support for mutt, tmux and iTerm
 * [gummesson/term-colors-pencil][tcp] - terminal support for urxvt and termite
 * [mattly/atom-colors-pencil-light][ap] - Atom version of the pencil color scheme
+* [nickburlett/vim-colors-stylus][vcs] - a fork, with a variation on pencil's colors
 
 [it]: https://github.com/mattly/iterm-colors-pencil
 [tcp]: https://github.com/gummesson/term-colors-pencil
 [ap]: https://github.com/mattly/atom-colors-pencil-light
+[vcs]: https://github.com/nickburlett/vim-colors-stylus
 
 If you find this colorscheme useful, you may want to check out these
 plugins by [@reedes][re]:
