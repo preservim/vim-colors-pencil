@@ -201,6 +201,7 @@ plugins by [@reedes][re]:
 * [vim-thematic][th] - modify Vim’s appearance to suit your task and environment
 * [vim-wheel][wh] - screen-anchored cursor movement for Vim
 * [vim-wordy][wo] - uncovering usage problems in writing
+* [vim-wordchipper][wc] - power tool for shredding text in Insert mode
 
 [re]: https://github.com/reedes
 [lx]: http://github.com/reedes/vim-lexical
@@ -212,6 +213,7 @@ plugins by [@reedes][re]:
 [th]: http://github.com/reedes/vim-thematic
 [wh]: http://github.com/reedes/vim-wheel
 [wo]: http://github.com/reedes/vim-wordy
+[wc]: http://github.com/reedes/vim-wordchipper
 
 The [README](https://github.com/reedes/vim-thematic) in
 _thematic_ has more details on setting up emulation of iA Writer.
