@@ -21,7 +21,7 @@ This Vim color scheme features:
 * Support for Vim’s Conceal feature to hide `_` and `*` markup for
   \_*italic*\_, \*\*__bold__\*\* and \*\*\*___bold italic___\*\*\* styled text in Markdown
 
-[tm]: http://github.com/tpope/vim-markdown
+[tm]: https://github.com/tpope/vim-markdown
 [pm]: https://github.com/preservim/vim-markdown
 [ba]: https://github.com/bling/vim-airline
 [gm]: https://github.com/gabrielelana/vim-markdown
@@ -145,7 +145,7 @@ For more details on Vim’s Conceal feature, see:
 :help concealcursor
 ```
 
-[tm]: http://github.com/tpope/vim-markdown
+[tm]: https://github.com/tpope/vim-markdown
 
 ## Usage
 
@@ -207,15 +207,15 @@ plugins originally by [@reedes][re]:
 * [vim-wordchipper][wc] - power tool for shredding text in Insert mode
 
 [re]: https://github.com/reedes
-[lx]: http://github.com/preservim/vim-lexical
-[lc]: http://github.com/preservim/vim-litecorrect
-[pn]: http://github.com/preservim/vim-colors-pencil
-[ts]: http://github.com/preservim/vim-textobj-sentence
-[qu]: http://github.com/preservim/vim-textobj-quote
-[th]: http://github.com/preservim/vim-thematic
-[wh]: http://github.com/preservim/vim-wheel
-[wo]: http://github.com/preservim/vim-wordy
-[wc]: http://github.com/preservim/vim-wordchipper
+[lx]: https://github.com/preservim/vim-lexical
+[lc]: https://github.com/preservim/vim-litecorrect
+[pn]: https://github.com/preservim/vim-colors-pencil
+[ts]: https://github.com/preservim/vim-textobj-sentence
+[qu]: https://github.com/preservim/vim-textobj-quote
+[th]: https://github.com/preservim/vim-thematic
+[wh]: https://github.com/preservim/vim-wheel
+[wo]: https://github.com/preservim/vim-wordy
+[wc]: https://github.com/preservim/vim-wordchipper
 
 The [README](https://github.com/preservim/vim-thematic) in
 _thematic_ has more details on setting up emulation of iA Writer.
