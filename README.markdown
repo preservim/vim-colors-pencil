@@ -15,14 +15,14 @@ This Vim color scheme features:
 * Use for both code and prose, though it’s definitely geared towards the latter
 * Light and dark background variants
 * iTerm color scheme [available][it] for using this color scheme with terminal-based Vim
-* Support for [tpope/vim-markdown][tm], [plasticboy/vim-markdown][pm], and
-  [gabrielelana/vim-markdown][gm]
+* Support for [tpope/vim-markdown][tm], [preservim/vim-markdown][pm] (aka
+  plasticboy/vim-markdown), and [gabrielelana/vim-markdown][gm]
 * Support for the [bling/vim-airline][ba] status bar plugin
 * Support for Vim’s Conceal feature to hide `_` and `*` markup for
   \_*italic*\_, \*\*__bold__\*\* and \*\*\*___bold italic___\*\*\* styled text in Markdown
 
 [tm]: http://github.com/tpope/vim-markdown
-[pm]: http://github.com/plasticboy/vim-markdown
+[pm]: https://github.com/preservim/vim-markdown
 [ba]: https://github.com/bling/vim-airline
 [gm]: https://github.com/gabrielelana/vim-markdown
 
@@ -36,7 +36,11 @@ For a basic install simply copy the color scheme file to your
 `~/.vim/colors` directory.
 
 For full support in which the airline theme is available, install using
-Pathogen, Vundle, Neobundle, or your favorite Vim package manager.
+Pathogen, Vundle, Neobundle, or your favorite Vim package manager. For
+more recent versions of vim and neovim, use your pack directory. (See
+[:help packages][packages] for more information.)
+
+[packages]: https://vimhelp.org/repeat.txt.html#packages
 
 ## Configuration
 
@@ -190,11 +194,10 @@ Cousine is a good match for Nitti Light.
 [vcs]: https://github.com/nickburlett/vim-colors-stylus
 
 If you find this colorscheme useful, you may want to check out these
-plugins by [@reedes][re]:
+plugins originally by [@reedes][re]:
 
 * [vim-lexical][lx] - building on Vim’s spell-check and thesaurus/dictionary completion
 * [vim-litecorrect][lc] - lightweight auto-correction for Vim
-* [vim-one][vo] - make use of Vim’s _+clientserver_ capabilities
 * [vim-pencil][pn] - rethinking Vim as a tool for writers
 * [vim-textobj-quote][qu] - extends Vim to support typographic (‘curly’) quotes
 * [vim-textobj-sentence][ts] - improving on Vim's native sentence motion command
@@ -204,18 +207,17 @@ plugins by [@reedes][re]:
 * [vim-wordchipper][wc] - power tool for shredding text in Insert mode
 
 [re]: https://github.com/reedes
-[lx]: http://github.com/reedes/vim-lexical
-[lc]: http://github.com/reedes/vim-litecorrect
-[vo]: http://github.com/reedes/vim-one
-[pn]: http://github.com/reedes/vim-pencil
-[ts]: http://github.com/reedes/vim-textobj-sentence
-[qu]: http://github.com/reedes/vim-textobj-quote
-[th]: http://github.com/reedes/vim-thematic
-[wh]: http://github.com/reedes/vim-wheel
-[wo]: http://github.com/reedes/vim-wordy
-[wc]: http://github.com/reedes/vim-wordchipper
+[lx]: http://github.com/preservim/vim-lexical
+[lc]: http://github.com/preservim/vim-litecorrect
+[pn]: http://github.com/preservim/vim-colors-pencil
+[ts]: http://github.com/preservim/vim-textobj-sentence
+[qu]: http://github.com/preservim/vim-textobj-quote
+[th]: http://github.com/preservim/vim-thematic
+[wh]: http://github.com/preservim/vim-wheel
+[wo]: http://github.com/preservim/vim-wordy
+[wc]: http://github.com/preservim/vim-wordchipper
 
-The [README](https://github.com/reedes/vim-thematic) in
+The [README](https://github.com/preservim/vim-thematic) in
 _thematic_ has more details on setting up emulation of iA Writer.
 
 ## Contributors
@@ -229,6 +231,8 @@ Thanks to those who have helped improve the _pencil_ color scheme:
 ## Future development
 
 If you’ve spotted a problem or have an idea on improving this color
-scheme, please post it to the github project issue page.
+scheme, please post it to the [GitHub project issue page][issues].
+
+[issues]: https://github.com/preservim/vim-colors-pencil/issues
 
 <!-- vim: set tw=74 :-->
