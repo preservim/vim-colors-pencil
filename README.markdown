@@ -209,7 +209,7 @@ plugins originally by [@reedes][re]:
 [re]: https://github.com/reedes
 [lx]: https://github.com/preservim/vim-lexical
 [lc]: https://github.com/preservim/vim-litecorrect
-[pn]: https://github.com/preservim/vim-colors-pencil
+[pn]: https://github.com/preservim/vim-pencil
 [ts]: https://github.com/preservim/vim-textobj-sentence
 [qu]: https://github.com/preservim/vim-textobj-quote
 [th]: https://github.com/preservim/vim-thematic
